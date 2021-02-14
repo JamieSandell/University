@@ -1,0 +1,7 @@
+Go to a node
+
+------
+check if the ball is within the node
+if it is and if it's a leaf, then found the position of the ball (could check for the other leafs in the node incase it's intersecting across multiple nodes), so return
+if it isn't a leaf and it's intersecting check the child node (child[0]...child[3])
+-----

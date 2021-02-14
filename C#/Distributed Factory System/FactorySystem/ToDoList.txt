@@ -1,0 +1,50 @@
+/////// General ////////
+Any server request must have a timeout (so not waiting infinitely)	-	DONE
+Each Program must use config files so that the program's are not hardcoded	-	DONE
+Each program (except the server) must be able to get the current online/offline status
+	of the server	-	
+Use properites instead of Getters/Setters	-	DONE
+Each program must have a set of default options read in from a configuration file	-	DONE
+Make use of Regions	-		
+Make sure that client is not blocked (e.g. clicking the generate button)	-	
+
+/////// Weighing Station ///////
+Be able to set the nominal weight	-	DONE
+Be able to set the name of the product being weighed	-	DONE
+When this data is changed it must be passed to the server	-	DONE
+Must use the weighing library provided so each time something is weighed it is handled
+	by the weighing station	-	DONE
+When the data is passed to the server the minimal information passed should be the date
+	and time at which the measurement was taken, and the nominal weight	-	DONE
+Validation Checks	-	DONE
+	Nominal Weight	-	DONE
+	Product Name	-	DONE		
+	
+/////// Server ///////
+Server should periodically check to see if each client is still connected,
+	if a client isn't connected their connection/thread should be closed	-	
+Server must receive data from as many weighing stations as wish to send it	-	DONE
+It must store this data	-	DONE
+It must be able to retreive the data	-	DONE
+It must provide data to the Management Information Systems terminals on demand	-	DONE	
+The server must be multi-threaded	-	DONE
+Server must be a stand-alone application	-	DONE
+Validation Checks	-	DONE
+	Incoming Data	-	DONE
+		Nominal Weight	-	DONE
+		Product Name	-	DONE
+
+/////// Management Information System Terminals ///////
+Must connect to the server and be able to request data to create reports	-	DONE
+Only two reports required (can add more):	-	DONE
+	A report showing the last 10 readings from EACH weighing station	-	DONE
+	A report showing the number of underweight bags for each weighing
+		station in the last 24 hours	-	DONE
+Any MIS terminal must be able to request and present either of these reports at any time	-	DONE
+The MIS application should be a standalone windows program, not a set of web pages	-	DONE	
+	
+/////// Utilities Project ///////
+Create a utilities project that contains the following classes:	-	
+	Validation	-	DONE
+	FileHandling	-	
+	ServerStatus	-	

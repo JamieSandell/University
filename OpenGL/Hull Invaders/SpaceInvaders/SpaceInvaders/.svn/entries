@@ -1,0 +1,89 @@
+8
+
+dir
+2
+https://wush.net/svn/nilrem/2nd_year/08240/space%20invaders/SpaceInvaders/SpaceInvaders
+https://wush.net/svn/nilrem
+
+
+
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+
+svn:special svn:externals svn:needs-lock
+
+Aliens.cs
+file
+
+
+
+
+2007-12-06T18:09:44.000000Z
+5f20ae9b113a626a4d44869d3413fcea
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+Player.cs
+file
+
+
+
+
+2007-12-06T16:38:18.000000Z
+d651ab877df1ffd8fcb3b6b92423e153
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+Timer.cs
+file
+
+
+
+
+2007-11-14T11:01:48.000000Z
+8ff96d1e1a5dc89f0e4db2d1f32a75a4
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+SpaceInvaders.csproj
+file
+
+
+
+
+2007-12-06T16:28:48.000000Z
+e7d9371e208c3c182bb3260b2bb647c0
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+bin
+dir
+
+Getting Started
+dir
+
+obj
+dir
+
+Program.cs
+file
+
+
+
+
+2007-12-06T18:12:52.000000Z
+2805875e24484adc5d7a9b801a717071
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+has-props
+
+Properties
+dir
+

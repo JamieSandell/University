@@ -1,0 +1,28 @@
+network 1
+6 neurons, 1 layer, momentum not used
+
+network 2
+6 neurons, 2 layers, momentum used
+
+network 3
+6 neurons, 2 layers, momentum NOT used
+
+network 4
+6 neurons, 1 layer, momentum used
+
+network 5
+1 neuron, 1 layer, momentum not used
+
+network 6
+1 neuron, 2 layers, momentum not used
+
+network 7
+1 neuron, 2 layers, momentum used
+
+network 8
+1 neuron, 1 layer, momentum used
+
+
+
+
+

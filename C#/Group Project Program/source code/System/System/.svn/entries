@@ -1,0 +1,85 @@
+8
+
+dir
+2
+https://wush.net/svn/nilrem/2nd_year/08220/miles/group%20project%20program/source%20code/System/System
+https://wush.net/svn/nilrem
+
+
+
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+
+svn:special svn:externals svn:needs-lock
+
+SystemManagement.csproj
+file
+
+
+
+
+2008-02-04T16:20:04.000000Z
+fb13707dfed5bd4c30e4b10321253ae4
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+Employee.cs
+file
+
+
+
+
+2007-12-05T19:55:10.000000Z
+e9981f420e34cba22967a9a2add396cb
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+Task.cs
+file
+
+
+
+
+2007-12-05T19:08:24.000000Z
+73ab5a1f291c1939e1bf51195ceaa700
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+bin
+dir
+
+System.cs
+file
+
+
+
+
+2007-12-05T19:38:16.000000Z
+5d50efe75416d772424a21b006686a3f
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+obj
+dir
+
+TaskAssign.cs
+file
+
+
+
+
+2007-12-05T19:55:10.000000Z
+783576f3934ecd771e022fd0a2fb91e1
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+Properties
+dir
+

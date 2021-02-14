@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="33d4b7d6-945b-4d0b-b2f7-bfe24a8e8973" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ArrayList" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8731/Design_Time_Addresses/WCFDataCentreServer/Service1/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="eb11d1a4-11ba-44f8-bb74-1c390e11a1d0" SourceId="1" SourceUrl="http://localhost:8731/Design_Time_Addresses/WCFDataCentreServer/Service1/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="02f1f66d-6bad-4156-a743-3802cdddeb91" SourceId="1" SourceUrl="http://localhost:8731/Design_Time_Addresses/WCFDataCentreServer/Service1/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="fc90b885-8dfd-4587-8c8d-d712b9e990aa" SourceId="1" SourceUrl="http://localhost:8731/Design_Time_Addresses/WCFDataCentreServer/Service1/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="1fde2c0b-cdd4-4bb0-8062-40c4d89386ae" SourceId="1" SourceUrl="http://localhost:8731/Design_Time_Addresses/WCFDataCentreServer/Service1/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

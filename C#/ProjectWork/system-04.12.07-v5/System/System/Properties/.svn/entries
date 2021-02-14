@@ -1,0 +1,76 @@
+8
+
+dir
+2
+https://wush.net/svn/nilrem/2nd_year/08220/miles/ProjectWork/system-04.12.07-v5/System/System/Properties
+https://wush.net/svn/nilrem
+
+
+
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+
+svn:special svn:externals svn:needs-lock
+
+AssemblyInfo.cs
+file
+
+
+
+
+2007-11-27T17:00:32.000000Z
+b3ebb7fd6d21c1684a7e31a3591e547e
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+Settings.settings
+file
+
+
+
+
+2007-11-27T17:00:32.000000Z
+8c0f00d7d9b0046695a0255f1b11b061
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+Settings.Designer.cs
+file
+
+
+
+
+2007-12-01T14:56:02.000000Z
+465d2238070692c6adcd5b333ff8df49
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+Resources.resx
+file
+
+
+
+
+2007-11-27T17:00:34.000000Z
+0cd8c971317d19bbed44757809bcb92b
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+Resources.Designer.cs
+file
+
+
+
+
+2007-12-01T14:56:02.000000Z
+5e47762f5965ee24ffa96522d0817dbf
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+

@@ -1,0 +1,157 @@
+8
+
+dir
+2
+https://wush.net/svn/nilrem/2nd_year/08220/miles/ProjectWork/UIdesign/WindowsApplication1/WindowsApplication1
+https://wush.net/svn/nilrem
+
+
+
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+
+svn:special svn:externals svn:needs-lock
+
+Form1.resx
+file
+
+
+
+
+2007-11-07T20:23:00.000000Z
+71275726c79d2915d863a4fcedd8d0c1
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+Form2.resx
+file
+
+
+
+
+2007-11-07T20:19:08.000000Z
+32a9f8db6987c2d0d6bb55fc487be5e8
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+Form3.resx
+file
+
+
+
+
+2007-11-07T20:45:56.000000Z
+32a9f8db6987c2d0d6bb55fc487be5e8
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+Form1.Designer.cs
+file
+
+
+
+
+2007-11-07T20:23:00.000000Z
+24a901eb97c7bba9f4808a7493f049ce
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+bin
+dir
+
+Form1.cs
+file
+
+
+
+
+2007-11-07T20:24:44.000000Z
+7a7cfffb574ff9e5c9ccd1fb1cd5e311
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+Form2.Designer.cs
+file
+
+
+
+
+2007-11-07T20:19:08.000000Z
+8f2a3d326d9eccfeccc10f924524d9e7
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+Form2.cs
+file
+
+
+
+
+2007-11-07T20:24:42.000000Z
+8c45fb113e2211c82105d9c082945259
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+Form3.Designer.cs
+file
+
+
+
+
+2007-11-07T20:45:56.000000Z
+e255044a9dcad7521c2b20c36992c054
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+Form3.cs
+file
+
+
+
+
+2007-11-07T20:45:56.000000Z
+97dd0543ba83fd5460cf7f9208469478
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+obj
+dir
+
+Program.cs
+file
+
+
+
+
+2007-11-07T20:23:34.000000Z
+21f2ffbb6857e975e5f95e4ea62cbb56
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+Properties
+dir
+
+WindowsApplication1.csproj
+file
+
+
+
+
+2007-11-07T20:46:16.000000Z
+cb983491e6d3ae7aa78097ad216fccb9
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+

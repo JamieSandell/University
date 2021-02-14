@@ -1,0 +1,44 @@
+8
+
+dir
+2
+https://wush.net/svn/nilrem/2nd_year/08220/miles/ProjectWork/StaffReportLibrary/StaffReport
+https://wush.net/svn/nilrem
+
+
+
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+
+svn:special svn:externals svn:needs-lock
+
+StaffReport
+dir
+
+StaffReport.suo
+file
+
+
+
+
+2007-11-30T13:08:16.000000Z
+098d61e15d3bac6cdd10918001dee30c
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+has-props
+
+StaffReport.sln
+file
+
+
+
+
+2007-11-29T17:42:42.000000Z
+f53741c9cbc672784f5e0a2af6ae8f22
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+

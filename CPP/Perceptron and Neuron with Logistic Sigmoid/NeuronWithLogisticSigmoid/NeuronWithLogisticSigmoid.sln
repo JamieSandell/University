@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OneInput", "NeuronWithLogisticSigmoid\NeuronWithLogisticSigmoid.vcproj", "{12526B42-757B-422B-B887-C0D7F5534C4E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TwoInputs", "TwoInputs\TwoInputs.vcproj", "{B9CE8737-E7ED-42C6-BFA7-798AFB255A41}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ThreeInputs", "ThreeInputs\ThreeInputs.vcproj", "{97337D54-256E-4E6E-B6B2-A590DB1D93F0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FourInputs", "FourInputs\FourInputs.vcproj", "{65090AB6-7B28-4C47-9B71-DC9640235053}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12526B42-757B-422B-B887-C0D7F5534C4E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{12526B42-757B-422B-B887-C0D7F5534C4E}.Debug|Win32.Build.0 = Debug|Win32
+		{12526B42-757B-422B-B887-C0D7F5534C4E}.Release|Win32.ActiveCfg = Release|Win32
+		{12526B42-757B-422B-B887-C0D7F5534C4E}.Release|Win32.Build.0 = Release|Win32
+		{B9CE8737-E7ED-42C6-BFA7-798AFB255A41}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B9CE8737-E7ED-42C6-BFA7-798AFB255A41}.Debug|Win32.Build.0 = Debug|Win32
+		{B9CE8737-E7ED-42C6-BFA7-798AFB255A41}.Release|Win32.ActiveCfg = Release|Win32
+		{B9CE8737-E7ED-42C6-BFA7-798AFB255A41}.Release|Win32.Build.0 = Release|Win32
+		{97337D54-256E-4E6E-B6B2-A590DB1D93F0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{97337D54-256E-4E6E-B6B2-A590DB1D93F0}.Debug|Win32.Build.0 = Debug|Win32
+		{97337D54-256E-4E6E-B6B2-A590DB1D93F0}.Release|Win32.ActiveCfg = Release|Win32
+		{97337D54-256E-4E6E-B6B2-A590DB1D93F0}.Release|Win32.Build.0 = Release|Win32
+		{65090AB6-7B28-4C47-9B71-DC9640235053}.Debug|Win32.ActiveCfg = Debug|Win32
+		{65090AB6-7B28-4C47-9B71-DC9640235053}.Debug|Win32.Build.0 = Debug|Win32
+		{65090AB6-7B28-4C47-9B71-DC9640235053}.Release|Win32.ActiveCfg = Release|Win32
+		{65090AB6-7B28-4C47-9B71-DC9640235053}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

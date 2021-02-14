@@ -1,0 +1,1250 @@
+From: <Saved by Windows Internet Explorer 7>
+Subject: Particle Systems
+Date: Wed, 6 May 2009 12:12:17 +0100
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_000B_01C9CE43.E647DDD0"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5579
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_000B_01C9CE43.E647DDD0
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://web.cs.wpi.edu/~matt/courses/cs563/talks/psys.html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Particle Systems</TITLE>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Dwindows-1252">
+<META content=3D"MSHTML 6.00.6000.16825" name=3DGENERATOR></HEAD>
+<BODY>
+<H1>Particle Systems</H1>
+<P>by Allen Martin=20
+<P>
+<H2>Introduction</H2>The term <I>particle system</I> is loosely defined =
+in=20
+computer graphics. It has been used to describe modeling techniques, =
+rendering=20
+techniques, and even types of animation. In fact, the definition of a =
+particle=20
+system seems to depend on the application that it is being used for. The =
+
+criteria that hold true for all particle systems are the following:
+<P>
+<UL><IMG alt=3Do=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ball.red.gi=
+f"=20
+  align=3Dbottom><B>Collection of particles</B> - A particle system is =
+composed of=20
+  one or more individual particles. Each of these particles has =
+attributes that=20
+  directly or indirectly effect the behavior of the particle or =
+ultimately how=20
+  and where the particle is rendered. Often, particles are graphical =
+primitives=20
+  such as points or lines, but they are not limited to this. Particle =
+systems=20
+  have also been used to represent complex group dynamics such as =
+flocking=20
+  birds.<BR><IMG alt=3Do=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ball.red.gi=
+f"=20
+  align=3Dbottom><B>Stochastically defined attributes</B> - The other =
+common=20
+  characteristic of all particle systems is the introduction of some =
+type of=20
+  random element. This random element can be used to control the =
+particle=20
+  attributes such as position, velocity and color. Usually the random =
+element is=20
+  controlled by some type of predefined stochastic limits, such as =
+bounds,=20
+  variance, or type of distribution.
+  <P></P></UL>This summary will present three different particle =
+systems, two of=20
+which were created by Reeves [REE83] [REE85] and one created by Reynolds =
+
+[REY87]. In addition, images from some example particle systems based on =
+Reeves=20
+initial model [REE83] will be presented.
+<P>
+<H2>Using Particle Systems to Model Fire and Explosions</H2>Reeves =
+initially=20
+used the term "particle system" to describe a method he used to create a =
+
+sequence of images for the move <I>Star Trek II: The Wrath of Khan</I>. =
+The=20
+effect he was trying to create was that of a bomb exploding on the =
+surface of a=20
+planet and fire spreading out from the point of impact to eventually =
+engulf the=20
+planet. Each particle in this system was a single point in space. The =
+fire was=20
+represented by thousands of these individual points. Typical polygonal =
+rendering=20
+methods create objects with straight edges, but representing the fire by =
+
+thousands of points gives the fire a "fuzzy" shape. Reeves calls an =
+object made=20
+up of particles a <I>fuzzy object</I>.
+<P>Each object in Reeves particle system had the following attributes:=20
+<UL><IMG alt=3Do=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ball.red.gi=
+f"=20
+  align=3Dbottom>Position<BR><IMG alt=3Do=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ball.red.gi=
+f"=20
+  align=3Dbottom>Velocity (speed and direction)<BR><IMG alt=3Do=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ball.red.gi=
+f"=20
+  align=3Dbottom>Color<BR><IMG alt=3Do=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ball.red.gi=
+f"=20
+  align=3Dbottom>Lifetime<BR><IMG alt=3Do=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ball.red.gi=
+f"=20
+  align=3Dbottom>Age<BR><IMG alt=3Do=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ball.red.gi=
+f"=20
+  align=3Dbottom>Shape<BR><IMG alt=3Do=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ball.red.gi=
+f"=20
+  align=3Dbottom>Size<BR><IMG alt=3Do=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ball.red.gi=
+f"=20
+  align=3Dbottom>Transparency<BR></UL>
+<H3>Particle Life Cycle</H3>Each particle goes through three distinct =
+phases in=20
+the particle system: generation, dynamics, and death. These phases are =
+described=20
+in more detail here:=20
+<UL><IMG alt=3Do=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ball.red.gi=
+f"=20
+  align=3Dbottom><B>Generation</B> - Particles in the system are =
+generated=20
+  randomly within a predetermined location of the fuzzy object. This =
+space is=20
+  termed the <I>generation shape</I> of the fuzzy object, and this =
+generation=20
+  shape may change over time. Each of the above mentioned attribute is =
+given an=20
+  initial value. These initial values may be fixed or may be determined =
+by a=20
+  stochastic process.
+  <P><IMG alt=3Do=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ball.red.gi=
+f"=20
+  align=3Dbottom><B>Particle Dynamics</B> - The attributes of each of =
+the=20
+  particles may vary over time. For example, the color of a particle in =
+an=20
+  explosion may get darker as it gets further from the center of the =
+explosion,=20
+  indicating that it is cooling off. In general, each of the particle =
+attributes=20
+  can be specified by a parametric equation with time as the parameter. =
+Particle=20
+  attributes can be functions of both time and other particle =
+attributes. For=20
+  example, particle position is going to be dependent on previous =
+particle=20
+  position and velocity as well as time.
+  <P><IMG alt=3Do=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ball.red.gi=
+f"=20
+  align=3Dbottom><B>Extinction</B> - Each particle has two attributes =
+dealing with=20
+  length of existence: age and lifetime. Age is the time that the =
+particle has=20
+  been alive (measured in frames), this value is always initialized to 0 =
+when=20
+  the particle is created. Lifetime is the maximum amount of time that =
+the=20
+  particle can live (measured in frames). When the particle age matches =
+it's=20
+  lifetime it is destroyed. In addition there may be other criteria for=20
+  terminating a particle prematurely:
+  <P>
+  <UL><IMG alt=3Do=20
+    =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ball.red.gi=
+f"=20
+    align=3Dbottom>Running out of bounds - If a particle moves out of =
+the viewing=20
+    area and will not reenter it, then there is no reason to keep the =
+particle=20
+    active.<BR><IMG alt=3Do=20
+    =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ball.red.gi=
+f"=20
+    align=3Dbottom>Hitting the ground - It may be assumed that particles =
+that run=20
+    into the ground burn out and can no longer be seen.<BR><IMG alt=3Do=20
+    =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ball.red.gi=
+f"=20
+    align=3Dbottom>Some attribute reaches a threshold - For example, if =
+the=20
+    particle color is so close to black that it will not contribute any =
+color to=20
+    the final image, then it can be safely destroyed. </UL></UL>
+<H3>Rendering</H3>When rendering this system of thousands of particles, =
+some=20
+assumptions have to be made to simplify the process. First, each =
+particle is=20
+rendered to a small graphical primitive (blob). Particles that map to =
+the same=20
+pixels in the image are additive - the color of a pixel is simply the =
+sum of the=20
+color values of all the particles that map to it. Because of this =
+assumption, no=20
+hidden surface algorithms are needed to render the image, the particles =
+are=20
+simply rendered in order. Effects like temporal ant-aliasing (motion =
+blur) are=20
+made simple by the particle system process. The position and velocity =
+are known=20
+for each particle. By rendering a particle as a streak, motion blur can =
+be=20
+achieved.
+<P>
+<H2>Using Particle Systems to Model Trees</H2>Reeves used the particle =
+system=20
+approach to model trees in the animated short movie <I>The Adventures of =
+Andre=20
+and Wally B.</I> [REE85] Each tree was created by using a particle =
+system, and=20
+the position of the trees within the forest was also controlled by a =
+particle=20
+system. The major enhancement over the previously mentioned particle =
+system is=20
+the rendering algorithm used. In <I>The Adventures of Andre and Wally =
+B.</I> a=20
+more traditional rendering method is used, and the previous =
+simplification of=20
+rendering the particles in order and making them additive is not used. =
+In=20
+addition, the generation shape of the particle system is not fixed, but =
+is=20
+dependent on the current state. For example, leaves may only be created =
+near the=20
+ends of branches.
+<P>
+<H3>Tree Particle System Rendering Technique</H3>The particles of the =
+trees are=20
+small circles used to represent leaves and lines used to represent =
+branches. A=20
+more traditional rendering technique is used that is based on the =
+painter's=20
+algorithm. Because of the large number of particles, standard lighting =
+and=20
+shadow calculations are computationally prohibitive, so more reasonable=20
+solutions must be made.=20
+<UL><IMG alt=3Do=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ball.red.gi=
+f"=20
+  align=3Dbottom><B>Self Shadowing</B> - Particles on the outside of the =
+tree are=20
+  more likely to be directly illuminated then points on the inside of =
+the tree=20
+  due to the self shadowing of the tree. To model this, a lighting model =
+is used=20
+  where a cone is used as the bounding volume for the tree. The distance =
+from=20
+  the point to the outside of the bounding volume along the line between =
+the=20
+  point and the light source is used as a parameter to the lighting =
+equation.=20
+  The lighting equation has a maximum value at the outer edge of the =
+bounding=20
+  volume facing the light, and decreases exponentially inside the tree. =
+The=20
+  previously mentioned distance parameter is used as the exponent in =
+this=20
+  equation.
+  <P><IMG alt=3Do=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ball.red.gi=
+f"=20
+  align=3Dbottom><B>Ambient Lighting</B> - Ambient lighting is based on =
+an=20
+  equation similar to the self shadowing equation. Since ambient light =
+is not=20
+  based on direct illumination from a light source the distance metric =
+is made=20
+  from the point being illuminated horizontally out to the edge of the =
+bounding=20
+  volume.
+  <P><IMG alt=3Do=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ball.red.gi=
+f"=20
+  align=3Dbottom><B>External Shadowing</B> - In addition to shadows cast =
+by the=20
+  tree on itself, shadows cast from neighboring trees must be =
+considered. This=20
+  is accomplished by tracing a line from the top of each neighboring =
+tree to the=20
+  light source. When a particle is being rendered it is checked to see =
+if it is=20
+  above or below this line. Points above this line are not shadowed, and =
+points=20
+  below this line have a chance of being in shadow that increases in =
+proportion=20
+  to the distance from the line.
+  <P></P></UL>For the same reasons that shadows could not be perfectly =
+generated=20
+for particles within the trees, the shadows that the trees cast on the =
+ground=20
+must also be approximated. The way this was done was by rendering an =
+image of=20
+the trees from a viewpoint on the ground. This image was then texture =
+mapped to=20
+the ground as a "shadow map." Points in the image that correspond to =
+trees were=20
+rendered as though they were in shadow.
+<P>The actual rendering algorithm used to draw the trees was a modified=20
+painter's algorithm. The first assumption used by this algorithm is that =
+the=20
+bounding volumes of no two trees intersect, so each tree could be =
+rendered=20
+independently. This cuts down on the number of particles that have to be =
+loaded=20
+simultaneously. In addition, instead of simply depth sorting the =
+particles, they=20
+are placed in a number of depth sorted bins. Inside each bin the =
+particles are=20
+simply rendered in order. This saves time because an exhaustive sort of =
+all=20
+particles does not have to be made. Errors caused by rendering particles =
+in=20
+order inside the bin are masked by the large number of particles.
+<P>
+<H2>Using Particle Systems to Model Flocking Birds</H2>The third example =
+of=20
+using particle systems was used by Reynolds to model the behavior of =
+birds=20
+moving in a flock [REY87]. In this particle system the particles are =
+used to=20
+represent "boids" (short for bird-object). This use of a particle system =
+has a=20
+few differences from what was used by Reeves:=20
+<UL><IMG alt=3Do=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ball.red.gi=
+f"=20
+  align=3Dbottom>Each boid is an entire polygonal object rather than a =
+graphical=20
+  primitive<BR><IMG alt=3Do=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ball.red.gi=
+f"=20
+  align=3Dbottom>Each boid has a local coordinate system.<BR><IMG =
+alt=3Do=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ball.red.gi=
+f"=20
+  align=3Dbottom>There are a fixed number of boids - they are not =
+created or=20
+  destroyed.<BR><IMG alt=3Do=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ball.red.gi=
+f"=20
+  align=3Dbottom>Traditional rendering methods can be used because there =
+are a=20
+  small number of boids.<BR><IMG alt=3Do=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ball.red.gi=
+f"=20
+  align=3Dbottom>Boids behavior is dependent on external as well as =
+internal=20
+  state. In other words, a boid reacts to what other boids are doing =
+around=20
+  it.<BR></UL>
+<H3>Boid Behavior Model</H3>Reynolds used observation of real flocks and =
+
+research of flock behavior to come up with three primary needs of a =
+boid.=20
+<UL><IMG alt=3Do=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ball.red.gi=
+f"=20
+  align=3Dbottom><B>Collision avoidance</B> - The boid does not wish to =
+collide=20
+  with other boids or obstacles.<BR><IMG alt=3Do=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ball.red.gi=
+f"=20
+  align=3Dbottom><B>Velocity matching</B> - Each boid attempts to go the =
+same=20
+  speed and direction as neighboring boids.<BR><IMG alt=3Do=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ball.red.gi=
+f"=20
+  align=3Dbottom><B>Flock centering</B> - Each boid attempts to stay =
+close to=20
+  nearby flockmates.<BR></UL>The boid's movement is made by combining =
+the impulses=20
+that are generated from these three needs. If each need produces a =
+vector that=20
+represents the direction and speed it thinks the boid should move in, it =
+may not=20
+be adequate to simply average these vectors. In the worst case, these =
+three=20
+vectors may be pointing in completely divergent directions, and the net =
+movement=20
+would be zero.
+<P><IMG=20
+alt=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=20
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/line.red.gi=
+f">
+<P>
+<H2>Examples</H2>Here are a few particle system examples that I put =
+together to=20
+demonstrate the process. These examples demonstrate the algorithm =
+presented by=20
+Reeves in [REE83]. Each of the particles maps to a single pixel in the =
+output=20
+image. The particles are translucent, with the color of multiple =
+particles that=20
+map to the same pixel being additive. In each example the particles are =
+given an=20
+initial upwards trajectory and are acted upon by gravity to give an =
+overall=20
+parabolic path. Except for the example where there are multiple =
+generation=20
+points each of these sequences was created using 20,000 particles and is =
+
+rendered to a 256x256 MPEG animation. The number of frames in each =
+animation=20
+varies from 20 to 50.
+<P>
+<UL><IMG=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/disc.gif"><=
+BR><IMG=20
+  alt=3Do=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ball.red.gi=
+f"=20
+  align=3Dbottom><A=20
+  =
+href=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/disc.mpg">=
+Example=20
+  1</A> - Particles are laid out in a circular disc structure and given =
+an=20
+  initial upwards velocity. When the particle's lifetime is expired it =
+is=20
+  removed. If the particle collides with the ground it remains =
+stationary.
+  <P><IMG=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/point.gif">=
+<BR><IMG=20
+  alt=3Do=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ball.red.gi=
+f"=20
+  align=3Dbottom><A=20
+  =
+href=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/point.mpg"=
+>Example=20
+  2</A> - Similar to Example 1, but particles are initially clustered =
+near a=20
+  single point.
+  <P><IMG=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/square.gif"=
+><BR><IMG=20
+  alt=3Do=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ball.red.gi=
+f"=20
+  align=3Dbottom><A=20
+  =
+href=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/square.mpg=
+">Example=20
+  3</A> - Similar to Example 1, but particles are initially laid out in =
+a square=20
+  structure.
+  <P><IMG=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ring.gif"><=
+BR><IMG=20
+  alt=3Do=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ball.red.gi=
+f"=20
+  align=3Dbottom><A=20
+  =
+href=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ring.mpg">=
+Example=20
+  4</A> - Similar to Example 1, but particles are initially laid out in =
+a ring=20
+  structure.
+  <P><IMG=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/point_regen=
+.gif"><BR><IMG=20
+  alt=3Do=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ball.red.gi=
+f"=20
+  align=3Dbottom><A=20
+  =
+href=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/point_rege=
+n.mpg">Example=20
+  5</A> - In this example the particles are initially clustered in a =
+point=20
+  similar to Example 2, but particles are constantly being regenerated =
+at the=20
+  start point. The effect looks very much like a fire or torch burning.
+  <P><IMG=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/point_move.=
+gif"><BR><IMG=20
+  alt=3Do=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ball.red.gi=
+f"=20
+  align=3Dbottom><A=20
+  =
+href=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/point_move=
+.mpg">Example=20
+  6</A> - In this example the point where the particles are being =
+regenerated is=20
+  translated in a circular motion through time. The effect looks like a =
+wick=20
+  burning. Note a visual anomaly with this sequence: there is a small =
+gap=20
+  between the point where the particles are being generated and where =
+the=20
+  cluster of generated particles from the previous frame are located. =
+This=20
+  exists because the initial upwards velocity has a fixed positive lower =
+bound.=20
+  Particles will have a minimum upwards movement dependent on this =
+velocity in=20
+  the first frame after they are created.
+  <P><IMG=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/points.gif"=
+><BR><IMG=20
+  alt=3Do=20
+  =
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ball.red.gi=
+f"=20
+  align=3Dbottom><A=20
+  =
+href=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/points.mpg=
+">Example=20
+  7</A> - In this example there are multiple generation points. The =
+generation=20
+  points are randomly created within a square boundary on the ground at =
+random=20
+  times during the sequence. The particles are created in a cluster at =
+each=20
+  generation point and are not regenerated. The result looks like a =
+series of=20
+  volcanos erupting or bombs exploding.
+  <P></P></UL><IMG=20
+alt=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=20
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/line.red.gi=
+f">
+<P>
+<H2>References</H2>
+<DL>
+  <DT>[REE83]=20
+  <DD>W. T. Reeves, "Particle Systems - A Technique for Modeling a Class =
+of=20
+  Fuzzy Objects", <I>Computer Graphics</I>, vol. 17, no. 3, pp 359-376, =
+1983.=20
+  <DT>[REE85]=20
+  <DD>W. T. Reeves, "Approximate and Probabilistic Algorithms for =
+Shading and=20
+  Rendering Structured Particle Systems", <I>Computer Graphics</I>, vol. =
+19, no.=20
+  3, pp 313-322, 1985.=20
+  <DT>[REY87]=20
+  <DD>C. W. Reynolds, "Flocks, Herds, and Schools: A Distributed =
+Behavioral=20
+  Model", <I>Computer Graphics</I>, vol. 21, no. 4, pp 25-34, 1987. =
+</DD></DL><IMG=20
+alt=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=20
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/line.red.gi=
+f">
+<P>
+<P>
+<P align=3Dcenter><A=20
+href=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks95.html"><IMG=20
+alt=3D"[Return to CS563 '95 talks list]"=20
+src=3D"http://web.cs.wpi.edu/images/back.gif" border=3D0></A> <IMG=20
+alt=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=20
+src=3D"http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/line.red.gi=
+f">
+<P>
+<ADDRESS>Allen Martin / <A=20
+href=3D"http://www.wpi.edu/cgi-bin/finger?amartin@cs">http://www.wpi.edu/=
+cgi-bin/finger?amartin@cs</A>=20
+</ADDRESS></BODY></HTML>
+
+------=_NextPart_000_000B_01C9CE43.E647DDD0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ball.red.gif
+
+R0lGODdhDgAOAPUAAP6k7/6L1v4wf/4gZv4PX/4PV/4HUf4AVf4ATO8AROcARd4AQ7+/v9YIQtYA
+RM1ihs1ifc1Ba80PS80AOsa9vcZ7lMZ7jMYAO70APL0AMrUAM60AMZxKZJwAKpQAKowxS4QQM4QA
+KnMPMHMAImsAImMAGVoAIVoAGEoAGUoAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAADgAOAAAGa0CGcEgsGo9ES0Qi
+iViOEMfhgEhcIMXK5EAQGBSXToUYORgCgIID4wERJQiDYNDAdEKn90KxmGjuJXkUQhEYGBkbdyYo
+IoNCFR4dHiEjJSkoHEUPJCQnKJ8fRYMVIicnIhyOokOOqkSqrQxBADs=
+
+------=_NextPart_000_000B_01C9CE43.E647DDD0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/line.red.gif
+
+R0lGODdhgAIEAPYAAAAAAEMDA0YDA04DA1YEBFkEBGEEBGgEBG8FBXMFBXoFBX0FBYQGBogGBosG
+Bo4GBpEGBpUHB5gHB5sHB54HB6EHB6QHB6cICKoICK0ICLAICLUJCbgJCbsJCcAJCcUKCsoKCswK
+Cs4KCtAKCtMLC9cLC9sLC9wLC+AMDOIMDOUMDOgNDeoNDesNDewNDe4ODu8ODvAODvIODvMPD/QP
+D/UQEPQQEPEODt4MDNkLC9ULC8cKCr0JCbMICPIREe8SEuwSEukTE+UTE+IUFN8UFNoUFNcVFdMV
+Fc8VFc4WFsoWFsgWFsYWFsQWFsMXF8EXF78XF70XF7sXF7kXF7gYGLYYGLIYGLAYGK8YGK0ZGaoZ
+GagZGaYZGaUaGqIaGqEaGp8aGp4aGp0bGwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwA
+AAAAgAIEAAAH/oAAgoOEhYaHiImKi4yNjo+QkZKTlJWWl5iZmpucnZ6foKGio4sBpgECqQOrrASu
+BAWxBrMGB7a3CLkJCQoKC7+/DMIMDcUNDsgPDxDMERES0BPSFBQV1hYWFxcY3BgZGRrhGxscHB3n
+HukeH+wfICAh8SIiI/UkJCX5JvsnJyj/KVKoULGiIIuDLRK6cPHiBYyHMWLImEhxhkWLNDJq3Kix
+hkePNkKKHEmypMiNJD+q5Miy5cWXFylOvHEjYoyHMBq+WLgwYYuDQAsKHUg0YIp/OHD067cvh9N8
+OnTcI1Fv3rx473ZoZZeOh9dzYDuM60E2XDdu2NJasMbWGrW3/m+lyZ1LF5rdu3jz6o02gVpbbNq2
+YQhHeFw5c+e8qkvXTuu7x5AjS55MubLlyFbvOV0aUOiKhA0rzshY0ofpHz+AAAnCWoiQIbCJyC5C
+24iRI0eQ6E6SRIlvJUuWMGHSpLgTJ0+eQFm+PIrzKFKiS5cyZQqV61WyW9m+/coVLOCzZNGiZYv5
+LVy4dFnvxcuXL2DihwkjRtApVKpYrXoFSxatW7jowosvwCwwDDHGIOOAMsxA4Ixdcvl1TTaCcfNN
+YeQg1sFi7bgDjzz02IOPPvz4A5BABBmEkEIMOQSRRDLJAFNLLKlUg0k45ojSSDZ6ROOPNMAEU4w0
+2YSTTjy5suATUAd5tgJRAxmFlFJLNfVUCVFNVZVVWIGg1Q5ceeAVD2GdM1ZZGpyFgVrYtMUWXHDR
+Jadce9VpJ18SThgYN4SJk6GGinHIjmOXFWrooZRlRsJm/XQmFGgviEYaSab5gJpqrAXhGmxDyEYE
+bUXYhptuSPD2G3DCEWcccsoxB8Vz0E0XXXXXUZFdFdx1911445V3XnrrddHee/GBMV99pCSr7LLM
+Nuvss9BGK+201FYbbSAAOw==
+
+------=_NextPart_000_000B_01C9CE43.E647DDD0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/disc.gif
+
+R0lGODdhjACMAPYAANAQGsgQGcAQGbgQGLAQGNgQGtAQEMgQEMAQELgQENgQEPgnIPg9KPhfQPif
+YPjWcPi+YPj4gPiWQPieUPiFOPimSPjIWPjQWPjnaPjPYPiGSPjvcPj4ePh9QPjIYPivUPjmcPjW
+aPjPaPjgaPhoOPi4WPiwWPinUPhVMPhfMPjAWPiXSPj4cPiQQPjuaPiOSPgnGPigSPhvMPhPIPi4
+UPhmKPiHQPhHKPh4OPhlMPhuOPh+OPg2IPg9IPhVKPhFGNAPCPhIIPhOKPh2MPhfKPg2GMgOCPhW
+IPguGPg9GPgUCPgfEMAOCPgnEGAIAPgvELgOCNgPCFgHAPgcCGgHAAAAAPj4kAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwA
+AAAAjACMAAAH/oBVgoOEhYaHiImKi4yNjo+QkZKTlJWWl5iZmpucnZ6foKGio6SlpqeoqaqrrK2u
+r7CxsrO0tba3uLm6u7y9vr/AwcLDxMXGx8jJysvMzc7P0NHS09TV1tfY2drb3N3e3+Dh4uPkuVKL
+VOWQ6YtOhOlU7Iru6lXyjPFVTlL0VeeD7qDUK7TPH6h73f7ZM7jwHBR359gZkSKFHb8qBxZ269cI
+iCB596goKUSFIyEmgxACfKaSkBFBSyCmM+COyhJBBvghMDDSJEmN6QQmNMiOHRMnNyPacxKPCgKk
+ThIwUfgxHQCmguhBeVnFIzV4g/6NFAQlygGwVa7ezBpzCYwq/jzY8YTnxEACgPEUZEVpDeS/eDeX
+UAGAwJ6CA3cxOkGCIB8SJwecKIi3IB2CKEbe2jsLBIgTrgSFgfx4dJDXmYWzUnkMxIARvfx6uDNA
+xSPNJVILLrFroEk6we6WVGSaoGVNY/Kc0ItsoKuRxhkJQTbSZEl1JFWM0GZihEoUKnFhCOZus4kS
+KgNKCgKQncpf6ceoMFE/aImSwk/0Va9y8yWSJzNApUQRTThRBBBFLGEEEjY1p092B9gnnhFLHCDF
+W9SRxpA9Le2iXj7vpOPfEjdRsWBMCQLR3QFKGAAEE1GQWAQSJELWxBRAwODaE4sBRmJM9lAYxWKM
+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
+
+------=_NextPart_000_000B_01C9CE43.E647DDD0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/point.gif
+
+R0lGODdhjACMAPYAAAgICPi2YPhoOPiGSPjgaPi+YPj4wPj44PhmKPj4mPj40PjmcPjIWPj4iPiO
+SPjPYPj4sPi4UPjXYPiwWPi4WPjWaPj4cPjAWPj4gPjPaPiXSPigSPjvePivUPhuOPiQQPjIaPj4
+qPh4OPinUPhVMPiFOPh+OPj4ePhvMPhfKPieUPiHQPhPIPhHKPg9GPiWUPhlMPh9QLAOCPhVKPg2
+IPhfMFgHAPh3QGgHAPhIIPhOKPgvEPgfEPgnEGAIAPg2GMgOCGgICPg9IPiWQPgUCMAOCNgPCPgu
+GPh2MGAICPgnGFgICNAPCPgfGPhWILgOCPhFGPgcCAAAAPj4+AAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwA
+AAAAjACMAAAH/oBSgoOEhYaHiImKi4yNjo+QkZKTlJWWl5iZmpucnZ6foKGio6SlpqeoqaqrrK2u
+r7CxsrO0tba3uLm6u7y9vr/AwcLDxMXGx8jJysvMzc7P0NHS09TV1tfY2drb3N3e3+Dh4uPk5ebn
+6Onq65g2hDiC7uyZPoLwgj44QVI+Nkn38xjd87EPCKF6BwMmtAev3r4g8IgYTCKliJQlgigiDLhR
+Crx9UvbVS7JPhiCQOHBQJCRPnQ0m/Iis5EFEUBEe+qQkSQIEiEp99QzK7Eiuno8kPmBK4aHTI0WD
+OJjsi4ITohQmFHuE/KhO5ckgWnEYtJnkiRQgT5IYMdKjyEp5/mYZ2vt2D57bpCuR4iRpI0gRIEeC
+9LXRg6nWHvD+SekBxGJFcS0p8ngCZAdEHoKFRIHJZGxOJkyYGgFCEQdOHkCCKLVH9Fq9JaVDVkwS
+BWRSIDwKR/nx5AhWj0yK+PhxNYhl1G61ZvQW5SpBKWZz8/BReR+PIj18CFHSY0f33NhzG8GxRCwT
+H1p9HJ3brUdnpkB8MH3y4wiQHkSM8GBS2IUSHiIQkRsRvvnl3j874GSEYi1dAxBpRjyhGlVgRYHb
+EUtV5EIQPwgxAw0stJADDzTRQBwTUVDkVhBgNSWSY9V4JYUN0wWh31kqScWERFIcwYMOPeRQgwcw
+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
+gQAAOw==
+
+------=_NextPart_000_000B_01C9CE43.E647DDD0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/square.gif
+
+R0lGODdhjACMAPUAANAQEMgQEMAQENgQEPgfGFgICGAICPgnIPguILAQGLgQEPg9KGgICPhOMPhe
+OPhoOPhuOPhVMPiHQPh4OPh+OPhfMPh9QPhHKPhlMPhvMPhmKPhfKPg2IPhOKPhVKPhWIPgnGPhP
+IPg9IPhIIPhFGNAPCLgOCPguGPg9GPg2GGgHAMgOCPgvEPgnEPgfEFgHAGAIAMAOCNgPCPgUCPgc
+CAAAAPiQQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAjACMAAAG/sCacEgsGo/IpHLJ
+bDqf0Kh0Sq1ar9isdsvter/gsHhMLpvP6LR6zW673/C4fE6v2+/4vH7P7/v/gIGCg4SFhoeIiYqL
+jI2Oj5CRkpOUlZaXmJmam5ydnp+fKqCRolUvo1gwRDCqRaeNrUWxSrNHpa41p7dPpbU1u0LAe6ol
+Q8JCqioFv6qvTwZFxUO+v0mirNN2wscvDDUrRrEM10MrML010M5LoiZDMULjNedEuwUw3nTgzS41
+MzX5pgVEsoLGEG/uSkFDBhBegXVGjhFhcKqVgYF1zC0zVqOAqHulAjZT6O6iCmg0vMVgkA9fCXkl
+DKxwAeNFiRcGai0TVcog/sB4HH9Se6NClIF/MmqsNFCsX7VrDFYslBbMWAl886oBZTCrxEpwpYpC
+U2VRCDye/gzEUFHCnDw3sVasCGjAHZGrMRZyZQDPn7x+8MC1cKGCa78VMkSBA2gUID4Vc0WdcEdj
+hgIhMmvQyJnuIjinalcRVeqihIykhFe0qAbYKwywSlsA8KbiBMuFqmKYducNtWaANCL3K8FC+FwD
+G2HESIhc1Iyk41ZIw9imlNzf6WD0M5AC4OIVBZzyrdEWRQvtXsExgMbgfPsYqlyMe2muxQxwXg14
+hmdz2cvNNQwGGQgB9kNbNm6IYpgKMeRVQz8MaucCDS64wEJhXq2WHgtq/pnQwocrnGQTVzG0UFiJ
+J5TQAgvrucBUCylM+MKEHMLwn3yQyXDUPyiUY6JobLwAD1fqcWViCymmQ+Fc2qkgg1fKmMhhDC60
+4M0J8HBXWAuJjZNCC6rZR1MNKMzEGI79yCDdOAUw4IJq4ADgz1xCtGDCddShMU4Mi5EHYzGmSTVY
+gO0pZUALxEl1Qgu6jcNUCDScN6GTa6oAggsmzHBBkjK0F1yVLXDXggBgyqDhSSWcUBpfKBgAWYPp
+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
+2ZgN2UEAADs=
+
+------=_NextPart_000_000B_01C9CE43.E647DDD0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/ring.gif
+
+R0lGODdhjACMAPYAANgQGtgYGNAYGMgYGMAYGPgYGOAQEOAXENgQENgXENAQENAWEMgQEMgWEMAQ
+EMAWEPgYEPgoKPgnILAQGLgQGLAQELgQEPhoQPiwWPi2YPi+YPiGSPjIYPjPaPhoOPjAWPhVMPie
+UPivUPi4WPiOSPiXSPinUPhHKPh3QPimSPigSPh9QPiHQPiQQPh+OPg2IPhvMPiFOPhuOPhfKPh4
+OPgnGPhPIPhfMPhlMPh2MPhmKNAPCPg9GPhOKPhVKLgOCPhWIPg9IPhIIMgOCPhFGPguGPg2GGAI
+AMAOCPgvEFgHAPgfEPgnEPgcCGgHANgPCPgUCAAAAPjgaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwA
+AAAAjACMAAAH/oBRgoOEhYaHiImKi4yNjo+QkZKTlJWWl5iZmpucnZ6foKGio6SlpqeoqaqrrK2u
+r7CxsrO0tba3uLm6u7y9vr/AwcLDxMXGx8jJysvMzc7P0NHS09TV1tfY2drb3N2lSt6p4OGqR4fm
+Q1Hj5JTm4+bmhOuC8Yb17IfzhU5R7v2D5vilOwKh3xF4/AIK4oftXhSGhtLxU7JEwY6FCeEdceIk
+waCMjCBWq+fkyI+FUR70g6AAgsQlBSCUXHCEwZElNY4MeUJPwkJwSpDQ27YxypCESpQokAihyJEF
+UGg2wAnhARMF/ZYs2fHg6AIGC5wUcWLBAT0nDP4dEfosXj1w/gwVOJGgoAFBJge1im1QhMkOJhCO
+MJk7luJRJ0auyrTQgGOFhxeNQnMoSImFJUoa7AjyEPGCJVFqQFjSAArgxEz63lxiRFCRHzedDNmh
+9UgDwCX7mYWoDxlEJEVB13jRoEnOJVCiQAHhZLARzkyMIF8CAUkQJloZBFmyAEIQBk2caGUCpUaR
+JU5dwjYicxDsY/AEHQ2NdkiTJUeE1EgMgYkQJIDVgB4TSNQgQxOvFeHdC83VMEQDQyjIRA1QINHX
+EulAeBADT8TDUW6U9XJEZAoccZwTZlnXH3BCALbADjYEISATqeFkhA98GRUEFHzVkER0EPDg1IAJ
+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
+ADs=
+
+------=_NextPart_000_000B_01C9CE43.E647DDD0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/point_regen.gif
+
+R0lGODdhjACMAPYAAAAAEAgICPg9KPh3QPi2YPhHKPjPaPiGSPjfcPjvcPjmcPjXYPi4UPj4mPj4
+4PiwWPi4WPjIWPiOSPjnaPj4sPjIYPiXSPj4wPj42PjWaPi+YPjPYPj4kPjgaPj4cPj4qPj40Pim
+SPjAWPj4gPh+OPivUPjfYPiQQPigSPhOKPjvePh9QPiHQPj4yPhvMPj4oPj48PjQWPg9GPhPIPin
+UPhmKPhuOPh4OPiWQPhVKPhfKPiFOPj4iPj46PieUNAPCPhlMLAOCPg2IPg9IPhIIPhWIPiWUPj4
+uPhfMPgvEPgfEPgnEPg2GLgOCPj4eMgOCPhVMPguGPgUCPjAUPgnGNgPCPgfGGAIAMAOCPh2MFgH
+APhFGPgcCGgHAAAAAPj4+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwA
+AAAAjACMAAAH/oBegoOEhYaHiImKi4yNjo+QkZKTlJWWl5iZmpucnZ6foKGio6SlpqeoqaqrrK2u
+r7CxsrO0tba3uLm6u7y9vr/AwcLDxMXGx8jJysvMzc7P0NHS09TV1tfY2drb3N3e3+ChV+Gr44ha
+Xl3kjeqFXepPh+bu65VYgubm7V1YWvOF/+oNaucloBcpBQXdKxigipcmg64QFFgIHaF8gqj8eBIg
+4Y9B8QR10dKREEKKEQmpqxJSZDqSXp68k1lSIcqU/mR6+RgxgJZ3XQI8wdLlRxeOR0XGCyrIIsUr
+HUvC8/kEqpIuV65o+WG1oD+hUlOmQymTaTopAZRc0dgFQIAo/mvLNhnZEd07KUF5OiWHNQBWJV78
+2r0SRckSJUpkQJUpJIBfQT+iJoVcL+i7AFkRX2GpRchco1S6KInSpYnEoUuuYPlo1qLBbvw6XrFy
+1sroIVSYUKGSA3fhKwWYYAn9JLIXJU1IMgkK9RtekZivJH+ipKqQJVKi/MCiQ0aOJVEOWsFK5Qri
+dFQAv0uXtaY1dPqO+p0dmOGSJ8UNE0EypMCQJUSMlhp+ay0h2hNcWBbVa9L8A9EVxhV0FFH4ISZD
+FVbMkB4RQ+TAhBS8UVHFEMU1lI5DEB0FlTnwWdMOZm9NCGETPxSmRBJdDJHEEDcAEcUQLgxBhBUs
+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
+
+------=_NextPart_000_000B_01C9CE43.E647DDD0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/point_move.gif
+
+R0lGODdhjACMAPYAAAAAEAgICPivYPhuQPidWPi+YPioWPj4yPhHKPjfcPj46PiwWPi4WPj40Pj4
+4PjPYPj4oNgPCPjnaPj4wPiWUPieUPjIYPjvcPjXYPjgaLAOCPj4uPjmcPj4mPjAWPj4iPjvePig
+SPh9QPj4sPiWQPivUPhuOPj4gPiHQPgnGPjWaPiQQPjIWPjPaPj4qPiFOPj48PhvMPinUPhPIPiX
+SPj4ePi4UPj4cPh4OPhOKPhmKPjIaPguGPiOSPj42PhfKNAPCPh+ONAQEPhVKPhlMPiGSLgOCPhF
+GPg9GPj4kPhIIPhOMPg2GMgOCMAOCPhfMPgcCPgnEPjuaMgQEPguIPg9IPgUCPhVMPgfEMAQEPim
+SPg2ILgQEGAIAPgYEPh2MFgHANgQEPhWIPgvEGgHAAAAAPj4+AAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwA
+AAAAjACMAAAH/oBlgoOEhYaHiImKi4yNjo+QkZKTlJWWl5iZmpucnZ6foKGio6SlpqeoqaqrrK2u
+r7CxsrO0tba3uLm6u7y9vr/AwcLDxMXGx8jJysvMzc7PZGRlXYPSz7VgTZDW15hg3NNggt+H4k7d
+peCG4l1kAYnR6KDa1GXxXoLu4GT1i+ryjMg0ASdOGhdBQAR1eeeuCxB39hJOYyQOIKJ61pzgi/au
+C7UuWLAMqpelmj1C56b1s+gITJZoTYSU4eKwzLcAZJxM8ZgiIRmZ096VmZKoIstEHnGqLIOFXYB2
+AZrQe+dTJkaFhKytHHd03EInIMGSyXLOCJYmWKJhmTIjmhCP/kQVggmJyEjXcmU0GgnjpOFXsCmi
+dMkyJYoTLBECjOEBk8lCIQmN3m30MEITIDzsBY6S4iwWHkOsVNHGBIvhdlt+fuOY0iYZyZOnCUxR
+BkgTHoLJ4LaNBAGQGVGqRIgCBIsRMmGi8HCSgmOZLJYHeRF6MrY7fJ+jeCke5ScRHiZ+RMEipIqT
+HFXGQyETUuBYbfwCSMynCPYzfECcrAczODsTEzMM4cVoUTBhRBCgDYiFF2l1pk0UCEGFiH1bLVMP
+FFGglYIR6C02hBJVhDjDFkSklcMQPDDhBRMRSAPEeNYIFoATRlXITYXPOAEEdExUwQMSTSCgwwAp
+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
+SJqkSrqkTNqkTtqkgQAAOw==
+
+------=_NextPart_000_000B_01C9CE43.E647DDD0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://web.cs.wpi.edu/~matt/courses/cs563/talks/images/points.gif
+
+R0lGODdhjACMAPYAAAgICPjIaPh3QPj42Pj4wPiWUPjPaPjmYPjgaPj46Pj4sPieUPjWaPimSPhV
+MPj40Pj4mPjXYPjWcPjuaPi+YPj4iPj4qPjIYPiFOPjvePjPYPg2IPjvcPi4UPjfYPj4oPjmcPh9
+QPj48PinUPj4gPjAUPivUPjAWPj4ePigSPjfcPj4yPhfMPi4WPiWQPiQQPiHQPh+OPiwWPj4kPiA
+SPh2MPiXSPhfKPioWPhlMPg9IPg9GPhvMPj4cPiOSNAPCPhWIPh4OPheOPhPIPhIIPiGSPjIWPhV
+KPgvEPhuOPg9KPgnEPg2GPgfEPhOKFgHAGgHAPhoOGgICPivSMAOCGAIAPguGPgUCLgOCPhHKNgP
+CPiOOPgnGGAICPgfGFgICMgOCPhmKLAOCPhFGPgcCAAAAPj4+AAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwA
+AAAAjACMAAAH/oBlgoOEhYaHiImKi4yNjo+QkZKTlJWWl5iZmpucnZ6foKGio6SlpqeoqaqrrK2u
+r7CxsrO0tba3uLm6u7y9vr/AwcLDuU/Ex4JQyMfKhM3LtsrP0LvTV4fGZcpPUtSnVYPgZWCFXWXm
+2mXZg+jeo9LJZd1l4vTnYNno9VjJVfXun77IG0TuUDdwXcBhkVLF3DqAorJVoQLlChgq5LA0IcQv
+oaCChP5BrCQmnSAqVNL9KLOyXZWV58qkLNgFZDcqD0dGWpdSUJV5A6Uo62JOykZtDbGkNPdDy0eZ
++kLqXKSsChh0PQUJLNMEytUqyrqyxNgNnTIwR+1BUWpP5FRE/gwHzQMzTV6TJuSqOP1ylUxCKl0A
+g5XyBMyXL0vqbX2L6NkPwCmV8QNcRgwSKD+h/EDCkByULkgIUvnyAwrQcVLIdavLOB69g+zELVkr
+dMmSc7dlSlmSEi8RbVKyDnJKqF1rY8+6XMtqevfCoVCWgGnZxdhj213jlnFqbvZVeG6nZhP45ayU
+uBv98ea6pFuTKkTIaOnaZcmPK0atnPsh5jY4wTHJ409rPm2lWTfk/ICFMpyVIR0YVSBhBUo1adEF
+E2TsQIVTt0VHkRYlwbQZTE6ddgxYxhmixRMCvScUFbcFVpoUZIDBBRlNDKHDEhvkMIQTVlyxgRVN
+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
+g0YOdaQ4o0FBeyIXYQgQ3QHY0fHI9NEqXYMdujI5mvSyS8Br/jvQNcMCU7ENV/fyZwOBEtYSseha
+2YeTPtBizPRQE7CyG4pT2rqiGWU4BI6iK6hERGTAPzUFQfqBSDMhJj9hFYTnGswhF74QHkKlvE/Q
+N7shDzhiFUUCBY5iLqlmFLCjH0HiM45SFjE1HYOk4XQhBWIgm+i647tAEeBQqQVvja21V0MwbljE
+6sQyLhsp5kbmLhuxz8YyGgPf19YCsf6eZIhgDMsyFKqxiUuGDkliFExmEbfhQNQiPASzMSgBjbS1
+Z0ql1OY1SI1g2aogGUOd5TOuBa8yOM1QLINkI4hCLWeyETOzUEmzcaRdNWFfNfPABClsCKVeCunj
+EISwQYOw/i/nStDoELY/4T5owRWI4jOdcxX6URlcoc8nARJhbkGEIBD50AvtIFvTXSVICQ7t8Q+C
+vix+cXvGEipX8bVUlBi9yg3KYMTeHg5zvwqzLQ3SQvUxsRrkkNbp0BkI8xhaLQ7xQ+5PYH95rzBm
+kRvMO7GK8CqdTQ8IEfLa7iw0IpuCcMAsMScf1OHr0+2VqghWX913nQxZAULS4hnkdnVniCWoG7HO
+MA+AfZQePwyoTwjllhVg6BdORA8gwaZHce1ZUdfzzQjrfwvtANiAUCYoKDZYBnVY1lUlNSgl9SVI
+VVZ1+LU02AUGJlgphWhoWBlKWmp6ipqqmhp52mgIxVmGrlX2A+vYaDspORq6OPrU2RXau2p8jJws
+CJo4iPgp+Hr4Kk1J6hk82Dus3O39jVpcVkgKVS0sWlsqzS3YdW4NLj+fyizYumx4Xlwstq9lalc8
+egQLppJlqJ2zaIrsDURYRoq4iA4NWrxobFS7itd8rVKIMaQ8UBxDlTSVrdktkSxbTizl0BaxljRr
+hnP00qbOnd7sgYLIM2jLk46EGj2KNKnSpUybOn0KNarUqRgDAQA7
+
+------=_NextPart_000_000B_01C9CE43.E647DDD0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://web.cs.wpi.edu/images/back.gif
+
+R0lGODlhFAAWAMIAAP///8z//5mZmWZmZjMzMwAAAAAAAAAAACH+TlRoaXMgYXJ0IGlzIGluIHRo
+ZSBwdWJsaWMgZG9tYWluLiBLZXZpbiBIdWdoZXMsIGtldmluaEBlaXQuY29tLCBTZXB0ZW1iZXIg
+MTk5NQAh+QQBAAABACwAAAAAFAAWAAADSxi63P4jEPJqEDNTu6LO3PVpnDdOFnaCkHQGBTcqRRxu
+WG0v+5LrNUZQ8QPqeMakkaZsFihOpyDajMCoOoJAGNVWkt7QVfzokc+LBAA7
+
+------=_NextPart_000_000B_01C9CE43.E647DDD0--

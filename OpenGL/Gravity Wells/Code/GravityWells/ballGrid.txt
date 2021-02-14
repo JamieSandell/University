@@ -1,0 +1,16 @@
+numberOfBalls = 10
+numberOfRows = 5
+ballsPerRow = numberOfBalls/numberOfRows
+
+int currentBall = 0;
+for allBalls
+	if (currentBall > ballsPerRow){
+		currentBall=0;
+		currentRow++;
+		currentRow*=ballSpacing;
+	}
+	balli.Position x = i*ballSpacing
+	balli.Position y = 0+currentRow
+	balli.Position z = 0
+	currentBall++;
+

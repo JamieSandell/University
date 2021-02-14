@@ -1,0 +1,135 @@
+8
+
+dir
+2
+https://wush.net/svn/nilrem/2nd_year/08220/miles/GameClub%20Sample%20Code/GameClub/GameClubSystem
+https://wush.net/svn/nilrem
+
+
+
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+
+svn:special svn:externals svn:needs-lock
+
+AssemblyInfo.cs
+file
+
+
+
+
+2005-11-13T09:07:00.000000Z
+30f13277ea8f426f9c2b8d3beee26096
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+GameClubSystem.sln
+file
+
+
+
+
+2006-10-17T13:37:12.000000Z
+bd5ad222a440e5bb757878f94ec6f834
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+_UpgradeReport_Files
+dir
+
+TitleReservationForm.resx
+file
+
+
+
+
+2005-11-13T11:27:00.000000Z
+90fac94e2d2c0c8f5d9c54a5444076f9
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+bin
+dir
+
+UpgradeLog.XML
+file
+
+
+
+
+2006-10-17T13:37:14.000000Z
+0310266fd8289c3d4dfca35f706adc1d
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+App.ico
+file
+
+
+
+
+2005-11-13T09:07:00.000000Z
+a78a91ff7a8c59192edc05466a68bee5
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+has-props
+
+GameClubSystem.suo
+file
+
+
+
+
+2007-10-31T18:56:22.000000Z
+3387d3c5533fa2bff3e810e6789d11fd
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+has-props
+
+obj
+dir
+
+GameClubWindowsGUI.csproj.user
+file
+
+
+
+
+2006-10-17T13:37:12.000000Z
+bdcca8dec1516f8d3a81ce77da85c325
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+TitleReservationForm.cs
+file
+
+
+
+
+2006-10-29T14:47:52.000000Z
+cd564fae25172d1fae814e4763e42057
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+GameClubWindowsGUI.csproj
+file
+
+
+
+
+2006-10-29T14:43:38.000000Z
+ba66a4d506c2db464b01250183b5bcbd
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+

@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Particle", "Particle\Particle.vcproj", "{6972D9A5-1B57-4007-B563-72B06D9AE2B2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		PSP Debug Opt|Win32 = PSP Debug Opt|Win32
+		PSP Debug|Win32 = PSP Debug|Win32
+		PSP Release|Win32 = PSP Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6972D9A5-1B57-4007-B563-72B06D9AE2B2}.PSP Debug Opt|Win32.ActiveCfg = PSP Debug Opt|Win32
+		{6972D9A5-1B57-4007-B563-72B06D9AE2B2}.PSP Debug Opt|Win32.Build.0 = PSP Debug Opt|Win32
+		{6972D9A5-1B57-4007-B563-72B06D9AE2B2}.PSP Debug|Win32.ActiveCfg = PSP Debug|Win32
+		{6972D9A5-1B57-4007-B563-72B06D9AE2B2}.PSP Debug|Win32.Build.0 = PSP Debug|Win32
+		{6972D9A5-1B57-4007-B563-72B06D9AE2B2}.PSP Release|Win32.ActiveCfg = PSP Release|Win32
+		{6972D9A5-1B57-4007-B563-72B06D9AE2B2}.PSP Release|Win32.Build.0 = PSP Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

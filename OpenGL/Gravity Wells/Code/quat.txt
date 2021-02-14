@@ -1,0 +1,5 @@
+http://www.opengl.org/discussion_boards/ubbthreads.php?ubb=showflat&Number=175247
+
+ u just need the lines where he creates spin, and times it by quation and then by 0.5
+ and the bit where he normalises the orientation
+ and the angle stuff in the draw u just said

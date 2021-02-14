@@ -1,0 +1,315 @@
+From: <Saved by Windows Internet Explorer 7>
+Subject: C++ Performance Tips
+Date: Wed, 6 May 2009 12:14:09 +0100
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www-2.cs.cmu.edu/~gilpin/c%2B%2B/performance.html
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5579
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>C++ Performance Tips</TITLE>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Dwindows-1252">
+<META content=3D"MSHTML 6.00.6000.16825" name=3DGENERATOR></HEAD>
+<BODY text=3D#ffffff vLink=3D#ffde00 link=3D#80ffff bgColor=3D#006daa>
+<H1>C++ Performance Tips</H1>
+<H2>Table of Contents</H2>
+<UL>
+  <LI><A=20
+  =
+href=3D"http://www-2.cs.cmu.edu/~gilpin/c%2B%2B/performance.html#Introduc=
+tion">Introduction</A>=20
+
+  <LI><A=20
+  =
+href=3D"http://www-2.cs.cmu.edu/~gilpin/c%2B%2B/performance.html#ctorsand=
+dtors">Constructors=20
+  and Destructors</A>=20
+  <LI><A=20
+  =
+href=3D"http://www-2.cs.cmu.edu/~gilpin/c%2B%2B/performance.html#virtualf=
+unctions">Virtual=20
+  Functions</A>=20
+  <LI><A=20
+  =
+href=3D"http://www-2.cs.cmu.edu/~gilpin/c%2B%2B/performance.html#returnva=
+lue">Return=20
+  Value</A>=20
+  <LI><A=20
+  =
+href=3D"http://www-2.cs.cmu.edu/~gilpin/c%2B%2B/performance.html#temporar=
+ies">Temporaries</A>=20
+
+  <LI><A=20
+  =
+href=3D"http://www-2.cs.cmu.edu/~gilpin/c%2B%2B/performance.html#inlining=
+">Inlining</A>=20
+  </LI></UL>
+<HR>
+
+<H2><A name=3DIntroduction></A>Introduction</H2>These tips are based =
+mainly on=20
+ideas from the book <A=20
+href=3D"http://www.amazon.com/exec/obidos/ASIN/0201379503/o/qid=3D9528417=
+53/sr=3D8-1/103-7948968-1311825">Efficient=20
+C++</A> by Dov Bulka and David Mayhew. For a more thorough treatment of=20
+performance programming with C++, I highly recommend this book. This =
+document,=20
+while presenting many of the same ideas in the book, does not go into as =
+much=20
+detail as to why certain techniques are better than others. The book =
+also=20
+provides code examples to illustrate many of the points presented here.=20
+<HR>
+
+<H2><A name=3Dctorsanddtors></A>Constructors and Destructors</H2>
+<UL>
+  <LI>The performance of constructors and destructors is often poor due =
+to the=20
+  fact that an object's constructor (destructor) may call the =
+constructors=20
+  (destructors) of member objects and parent objects. This can result in =
+
+  constructors (destructors) that take a long time to execute, =
+especially with=20
+  objects in complex hierarchies or objects that contain several member =
+objects.=20
+  As long as all of the computations are necessary, then there isn't =
+really a=20
+  way around this. As a programmer, you should at least be aware of this =
+"silent=20
+  execution".=20
+  <P>If all of the computations mentioned above are not necessary, then =
+they=20
+  should be avoided. This seems like an obvious statement, but you =
+should be=20
+  sure that the computations performed by the constructor that you are =
+using is=20
+  doing only what you need. </P>
+  <LI>Objects should be only created when they are used. A good =
+technique is to=20
+  put off object creation to the scope in which it is used. This =
+prevents=20
+  unnecessary constructors and destructors from being called.=20
+  <LI>Using the initializer list functionality that C++ offers is very =
+important=20
+  for efficiency. All member objects that are not in the initializer =
+list are by=20
+  default created by the compiler using their respective default =
+constructors.=20
+  By calling an object's constructor in the initializer list, you avoid =
+having=20
+  to call an object's default constructor and the overhead from an =
+assignment=20
+  operator inside the constructor. Also, using the initializer list may =
+reduce=20
+  the number of temporaries needed to construct the object. See the <A=20
+  =
+href=3D"http://www-2.cs.cmu.edu/~gilpin/c%2B%2B/performance.html#temporar=
+ies">Temporaries</A>=20
+  section for more information on this. </LI></UL>
+<HR>
+
+<H2><A name=3Dvirtualfunctions></A>Virtual Functions</H2>
+<UL>
+  <LI>Virtual functions negatively affect performance in 3 main ways:=20
+  <OL>
+    <LI>The constructor of an object containing virtual functions must=20
+    initialize the <CODE>vptr</CODE> table, which is the table of =
+pointers to=20
+    its member functions.=20
+    <LI>Virtual functions are called using pointer indirection, which =
+results in=20
+    a few extra instructions per method invocation as compared to a =
+non-virtual=20
+    method invocation.=20
+    <LI>Virtual functions whose resolution is only known at run-time =
+cannot be=20
+    inlined. (For more on inlining, see the <A=20
+    =
+href=3D"http://www-2.cs.cmu.edu/~gilpin/c%2B%2B/performance.html#inlining=
+">Inlining</A>=20
+    section. </LI></OL>
+  <LI>Templates can be used to avoid the overhead of virtual functions =
+by using=20
+  a templated class in place of inheritance. A templated class does not =
+use the=20
+  <CODE>vptr</CODE> table because the type of class is known at =
+compile-time=20
+  instead of having to be determined at run-time. Also, the non-virtual =
+methods=20
+  in a templated class can be inlined.=20
+  <LI>The cost of using virtual functions is usually not a factor in =
+calling=20
+  methods that take a long time to execute since the call overhead is =
+dominated=20
+  by the method itself. In smaller methods, for example accessor =
+methods, the=20
+  cost of virtual functions is more important. </LI></UL>
+<HR>
+
+<H2><A name=3Dreturnvalue></A>Return Value</H2>Methods that must return =
+an object=20
+usually have to create an object to return. Since constructing this =
+object takes=20
+time, we want to avoid it if possible. There are several ways to =
+accomplish=20
+this.=20
+<UL>
+  <LI>Instead of returning an object, add another parameter to the =
+method which=20
+  allows the programmer to pass in the object in which the programmer =
+wants the=20
+  result stored. This way the method won't have to create an extra =
+object. It=20
+  will simply use the parameter passed to the method. This technique is =
+called=20
+  Return Value Optimization (RVO).=20
+  <LI>Whether or not RVO will result in an actual optimization is up to =
+the=20
+  compiler. Different compilers handle this differently. One way to help =
+the=20
+  compiler is to use a computational constructor. A computational =
+constructor=20
+  can be used in place of a method that returns an object. The =
+computational=20
+  constructor takes the same parameters as the method to be optimized, =
+but=20
+  instead of returning an object based on the parameters, it initializes =
+itself=20
+  based on the values of the parameters. </LI></UL>
+<HR>
+
+<H2><A name=3Dtemporaries></A>Temporaries</H2>Temporaries are objects =
+that are=20
+"by-products" of a computation. They are not explicitly declared, and as =
+their=20
+name implies, they are temporary. Still, you should know when the =
+compiler is=20
+creating a temporary object because it is often possible to prevent this =
+from=20
+happening.=20
+<UL>
+  <LI>The most common place for temporaries to occur is in passing an =
+object to=20
+  a method by value. The formal argument is created on the stack. This =
+can be=20
+  prevented by using pass by address or pass by reference.=20
+  <LI>Compilers may create a temporary object in assignment of an =
+object. For=20
+  example, a constructor that takes an <CODE>int</CODE> as an argument =
+may be=20
+  assigned an <CODE>int</CODE>. The compiler will create a temporary =
+object=20
+  using the <CODE>int</CODE> as the parameter and then call the =
+assignment=20
+  operator on the object. You can prevent the compiler from doing this =
+behind=20
+  your back by using the <CODE>explicit</CODE> keyword in the =
+declaration of the=20
+  constructor.=20
+  <LI>When objects are returned by value, temporaries are often used. =
+See the <A=20
+  =
+href=3D"http://www-2.cs.cmu.edu/~gilpin/c%2B%2B/performance.html#returnva=
+lue">Return=20
+  Value</A> section for more on this.=20
+  <LI>Temporaries can be avoided by using <CODE>&lt;op&gt;=3D</CODE> =
+operators.=20
+  For example, the code<BR><CODE>a =3D b + c;</CODE><BR>could be written =
+
+  as<BR><CODE>a=3Db;<BR>a+=3Dc;</CODE>. </LI></UL>
+<HR>
+
+<H2><A name=3Dinlining></A>Inlining</H2>Inlining is one of the easiest=20
+optimizations to use in C++ and it can result in the most dramatic =
+improvements=20
+in execution speed. The main thing to know when using inlining is when =
+you=20
+should inline a method and when you shouldn't inline.=20
+<UL>
+  <LI>There is always a trade-off between code size and execution speed =
+when=20
+  inlining. In general, small methods (for example, accessors) should be =
+inlined=20
+  and large methods should not be inlined.=20
+  <LI>If you are not sure of whether or not a given method should be =
+inlined,=20
+  the best way to decide is to profile the code. That is, run test =
+samples of=20
+  the code, timing inlining and non-inlining versions.=20
+  <LI>Excessive inlining can drastically increase code size, which can =
+result in=20
+  increased execution times because of a resulting lower cache hit rate. =
+
+  <LI>Watch out for inlined methods that make calls to other inlined =
+methods.=20
+  This can make the code size unexpectedly larger.=20
+  <LI>Singleton methods, methods that are only called from one place in =
+a=20
+  program, are ideal for inlining. The code size does not get any bigger =
+and=20
+  execution speed only gets better.=20
+  <LI>Using literal arguments with an inlined method allows the compiler =
+to make=20
+  significant optimizations. (This is, however, compiler dependent.)=20
+  <LI>The compiler preprocessor can be used to implement conditional =
+inlining.=20
+  This is useful so that during testing the code is easier to debug. But =
+for=20
+  compiling production code, there are no changes to be made to the =
+source code.=20
+  This is implemented by using a preprocessor macro called =
+<CODE>INLINE</CODE>.=20
+  Inlined code is defined within <CODE>#ifdef INLINE ... #endif</CODE> =
+code=20
+  blocks. Similarly, non-inlined code is defined within <CODE>#ifndef =
+INLINE ...=20
+  #endif</CODE> code blocks. Then to compile using inlined code, you =
+tell the=20
+  compiler to treat <CODE>INLINE</CODE> as defined. =
+(<CODE>-DINLINE</CODE> with=20
+  <CODE>g++</CODE>)=20
+  <LI>Sometimes it makes sense to inline a given method in some places, =
+but to=20
+  not inline in other places within the same program. This can be =
+accomplished=20
+  using a technique called selective inlining. The implementation of =
+this=20
+  technique is not very convenient. For each method that you want to =
+selectively=20
+  inline you have two methods, where on one has "inline_" prepended to =
+the=20
+  method name and is of course inlined. The method without the "inline_" =
+
+  prepended to its name simply calls the inlined version of the method.=20
+  <LI>Recursive calls cannot be inlined, but there are two techniques to =
+try to=20
+  improve performance in the case of recursive methods:=20
+  <OL>
+    <LI>If the recursion is tail recursion, then the algorithm can be =
+rewritten=20
+    as an iterative algorithm, eliminating the overhead of method =
+invocations.=20
+    <LI>Recursive call unrolling basically allows the programmer to =
+inline the=20
+    first steps of recursion in a recursive algorithm. For example, for =
+a=20
+    recursive method <CODE>print()</CODE> we might do the following:=20
+    <CODE>print_unrolled() </CODE>calls <CODE>print1()</CODE> which =
+calls=20
+    <CODE>print2()</CODE> which calls <CODE>print3()</CODE> which calls=20
+    <CODE>print()</CODE>. All methods except <CODE>print()</CODE> are =
+inlined.=20
+    The number of recursive steps can be made as high as desired, =
+depending on=20
+    the application. </LI></OL></LI></UL>
+<HR>
+Please send comments (complaints), suggestions (corrections), and =
+additions=20
+(subtractions) to <A href=3D"mailto:gilpin@cs.cmu.edu">Andrew =
+Gilpin</A>.=20
+<P>Thanks to Andreas Franke for correcting an error.=20
+<P>Page last modified: October 5, 2002 </P></BODY></HTML>

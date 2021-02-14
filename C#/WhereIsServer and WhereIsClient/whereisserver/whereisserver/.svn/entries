@@ -1,0 +1,49 @@
+8
+
+dir
+2
+https://wush.net/svn/nilrem/2nd_year/08241/whereisserver/whereisserver
+https://wush.net/svn/nilrem
+
+
+
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+
+svn:special svn:externals svn:needs-lock
+
+bin
+dir
+
+obj
+dir
+
+Program.cs
+file
+6
+
+
+
+2008-02-19T16:53:16.609375Z
+eeb82fead0153c730014e610a1d26897
+2008-02-19T17:23:29.743627Z
+6
+nilrem
+
+Properties
+dir
+
+whereisserver.csproj
+file
+4
+
+
+
+2008-02-13T14:06:27.406250Z
+8561c2100bf18416499db99bb4f7c06e
+2008-02-13T17:17:01.262243Z
+4
+nilrem
+

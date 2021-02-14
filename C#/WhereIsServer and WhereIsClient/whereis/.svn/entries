@@ -1,0 +1,59 @@
+8
+
+dir
+0
+https://wush.net/svn/nilrem
+https://wush.net/svn/nilrem
+
+
+
+2008-02-11T14:53:05.950644Z
+0
+
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+4775f01a-198e-4851-954d-c6c639c6bf09
+
+whereis.sln
+file
+16
+
+
+
+2008-02-26T13:22:36.000000Z
+9739d195543754628ca8b1d606dfe1d7
+2008-02-28T12:34:07.390745Z
+16
+nilrem
+
+2005
+dir
+
+whereis
+dir
+
+whereis.suo
+file
+16
+
+
+
+2008-02-26T13:26:06.000000Z
+0e6a71969835392c812866cc65cb7d6e
+2008-02-28T12:34:07.390745Z
+16
+nilrem
+has-props
+

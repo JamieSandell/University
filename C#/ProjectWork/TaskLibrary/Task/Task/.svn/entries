@@ -1,0 +1,86 @@
+8
+
+dir
+2
+https://wush.net/svn/nilrem/2nd_year/08220/miles/ProjectWork/TaskLibrary/Task/Task
+https://wush.net/svn/nilrem
+
+
+
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+
+svn:special svn:externals svn:needs-lock
+
+Task.csproj
+file
+
+
+
+
+2007-11-29T20:46:08.000000Z
+e052d105bd6a385721bf88431d68cde6
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+Employee.cs
+file
+
+
+
+
+2007-11-29T20:46:04.000000Z
+feacb84a9717b5035c9b6e0e974101ca
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+StaffReport.cs
+file
+
+
+
+
+2007-11-29T20:49:12.000000Z
+95be14a6c6af45f1c8d54ce08c051220
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+Task.zip
+file
+
+
+
+
+2007-11-27T20:45:24.000000Z
+d157da54c8ab16dd4b7504e05b416b89
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+has-props
+
+Task.cs
+file
+
+
+
+
+2007-11-29T18:14:06.000000Z
+2c697fa5a275301a1f2e03460244275b
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+bin
+dir
+
+obj
+dir
+
+Properties
+dir
+

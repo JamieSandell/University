@@ -1,0 +1,47 @@
+8
+
+dir
+2
+https://wush.net/svn/nilrem/2nd_year/08220/miles/ProjectWork/system-04.12.07-v5/System
+https://wush.net/svn/nilrem
+
+
+
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+
+svn:special svn:externals svn:needs-lock
+
+System.sln
+file
+
+
+
+
+2007-12-03T17:10:24.000000Z
+1cae23536806d0e35c18835b997aa3af
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+WindowsApplication2
+dir
+
+System
+dir
+
+System.suo
+file
+
+
+
+
+2007-12-04T21:33:50.000000Z
+53c5c6accf8fc358f1aecd1a9a10d0da
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+has-props
+

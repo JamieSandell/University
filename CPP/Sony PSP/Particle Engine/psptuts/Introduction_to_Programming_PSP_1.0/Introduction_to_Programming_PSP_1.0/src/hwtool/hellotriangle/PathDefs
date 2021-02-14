@@ -1,0 +1,16 @@
+AR      = psp-ar
+AS      = psp-as
+CC      = psp-gcc
+GCC     = psp-gcc
+CXX     = psp-g++
+LD      = psp-ld
+NM      = psp-nm
+SIZE    = psp-size
+STRIP   = psp-prx-strip
+GNUSTRIP= psp-gnu-strip
+RANLIB  = psp-ranlib
+OBJCOPY = psp-objcopy
+OBJDUMP = psp-objdump
+PFIXUP   = pspfixup
+PLIBGEN  = psplibgen
+BIN2OBJ  = bin2elf

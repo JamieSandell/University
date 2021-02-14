@@ -1,0 +1,60 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.IO;
+
+namespace Logging
+{
+    public interface ILoggingSystem
+    {
+        /// <Summary>
+        /// Writes to a log file
+        /// <param name="message">The message to write to the log file</param>
+        /// <param name="file">The file to write to</param>
+        /// </Summary>
+        /// <Returns>
+        /// An empty string if successful, else an error message
+        /// </Returns>
+        string WriteToLog(string message, string file);
+    }
+
+    public class LoggingSystem : ILoggingSystem
+    {
+        public string WriteToLog(string message, string file)
+        {
+            string reply = "";
+            try
+            {
+                FileInfo fi = new FileInfo(@"c:\MyTest.txt");
+
+                // This text is added only once to the file.
+                if (!fi.Exists)
+                {
+                    //Create a file to write to.
+                    using (StreamWriter sw = fi.CreateText())
+                    {
+                        sw.WriteLine("Hello");
+                        sw.WriteLine("And");
+                        sw.WriteLine("Welcome");
+                    }
+                }
+
+                // This text will always be added, making the file longer over time
+                // if it is not deleted.
+                using (StreamWriter sw = fi.AppendText())
+                {
+                    sw.WriteLine("This");
+                    sw.WriteLine("is Extra");
+                    sw.WriteLine("Text");
+                }  
+            }
+            catch (System.Exception e)
+            {
+                //reply = Convert.ToString(e);
+                reply = "There was a problem whilst trying to write to the log file\nplease make sure the file: " + file + " is not already open";
+                return reply;
+            }
+            return reply;
+        }
+    }
+}

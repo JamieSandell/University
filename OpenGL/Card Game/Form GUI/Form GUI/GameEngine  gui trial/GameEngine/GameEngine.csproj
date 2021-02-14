@@ -1,0 +1,73 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9FC99001-F84F-40BB-B90E-E50DA5C05084}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CardGame</RootNamespace>
+    <AssemblyName>GameEngine</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tao.Glut, Version=3.7.6.1, Culture=neutral" />
+    <Reference Include="Tao.OpenGl, Version=1.5.0.2, Culture=neutral" />
+    <Reference Include="Tao.Platform.Windows, Version=1.0.0.2, Culture=neutral" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Player\Player\Player.csproj">
+      <Project>{B3696E1D-9F3D-4C32-BF85-48BEC742348F}</Project>
+      <Name>Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ScoringSystem\ScoringSystem v2\ScoringSystem.csproj">
+      <Project>{0DC38CA5-AFAA-4D4C-AACB-C1705079AE85}</Project>
+      <Name>ScoringSystem</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Text\Text\Text.csproj">
+      <Project>{1D425EFC-F1B9-4952-97A8-43EC610CDFC3}</Project>
+      <Name>Text</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Timer\Timer\Timer\Timer.csproj">
+      <Project>{6F5B5DEE-581A-439D-A7E7-1D548081AC91}</Project>
+      <Name>Timer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Getting Started\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

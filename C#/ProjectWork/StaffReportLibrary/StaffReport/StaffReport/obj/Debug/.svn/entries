@@ -1,0 +1,73 @@
+8
+
+dir
+2
+https://wush.net/svn/nilrem/2nd_year/08220/miles/ProjectWork/StaffReportLibrary/StaffReport/StaffReport/obj/Debug
+https://wush.net/svn/nilrem
+
+
+
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+
+svn:special svn:externals svn:needs-lock
+
+ResolveAssemblyReference.cache
+file
+
+
+
+
+2007-11-29T20:44:22.000000Z
+b3967a966b9141ab8d338e53ee228a54
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+has-props
+
+StaffReport.pdb
+file
+
+
+
+
+2007-11-29T22:26:56.000000Z
+ea29a6ccfd662e7a1aa9e0b9d6c1af66
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+has-props
+
+Refactor
+dir
+
+StaffReport.dll
+file
+
+
+
+
+2007-11-29T22:26:58.000000Z
+9909799e440dc2afd13ee991d7fc73c5
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+has-props
+
+TempPE
+dir
+
+build.force
+file
+
+
+
+
+2007-11-29T20:47:16.000000Z
+d41d8cd98f00b204e9800998ecf8427e
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+

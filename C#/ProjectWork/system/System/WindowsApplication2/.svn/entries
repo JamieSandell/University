@@ -1,0 +1,157 @@
+8
+
+dir
+2
+https://wush.net/svn/nilrem/2nd_year/08220/miles/ProjectWork/system/System/WindowsApplication2
+https://wush.net/svn/nilrem
+
+
+
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+
+svn:special svn:externals svn:needs-lock
+
+SystemUserInterface.csproj
+file
+
+
+
+
+2007-12-02T14:50:46.000000Z
+0316668aba5cac62222aca9447b53d2e
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+TaskMenu.resx
+file
+
+
+
+
+2007-12-03T17:03:42.000000Z
+32a9f8db6987c2d0d6bb55fc487be5e8
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+bin
+dir
+
+StaffMenu.resx
+file
+
+
+
+
+2007-12-03T22:20:36.000000Z
+32a9f8db6987c2d0d6bb55fc487be5e8
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+MainMenu.resx
+file
+
+
+
+
+2007-12-02T16:19:34.000000Z
+71275726c79d2915d863a4fcedd8d0c1
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+obj
+dir
+
+TaskMenu.Designer.cs
+file
+
+
+
+
+2007-12-03T17:03:42.000000Z
+a64879c9774b8383111777401705c599
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+Program.cs
+file
+
+
+
+
+2007-12-02T14:49:56.000000Z
+4e2888553733c6f4d88a2e488514e805
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+StaffMenu.Designer.cs
+file
+
+
+
+
+2007-12-03T22:20:36.000000Z
+11d397fdab4420c284cc4244964bf2c6
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+TaskMenu.cs
+file
+
+
+
+
+2007-12-03T17:37:48.000000Z
+a417019393c098a5082423ec5b867f30
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+MainMenu.Designer.cs
+file
+
+
+
+
+2007-12-02T16:19:34.000000Z
+50ce71568abb94b0fb82855beebc1951
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+Properties
+dir
+
+StaffMenu.cs
+file
+
+
+
+
+2007-12-03T22:20:36.000000Z
+b17789726138920e5fa688dee0cc33e8
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+MainMenu.cs
+file
+
+
+
+
+2007-12-02T16:19:44.000000Z
+7707a4e2c97fe201ebb9d24725bba35e
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+

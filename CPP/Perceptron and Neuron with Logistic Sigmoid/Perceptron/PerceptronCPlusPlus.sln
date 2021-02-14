@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PerceptronCPlusPlus", "PerceptronCPlusPlus\PerceptronCPlusPlus.vcproj", "{0E69D0F5-7A99-4407-9E6A-133D1A81B8B9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E69D0F5-7A99-4407-9E6A-133D1A81B8B9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0E69D0F5-7A99-4407-9E6A-133D1A81B8B9}.Debug|Win32.Build.0 = Debug|Win32
+		{0E69D0F5-7A99-4407-9E6A-133D1A81B8B9}.Release|Win32.ActiveCfg = Release|Win32
+		{0E69D0F5-7A99-4407-9E6A-133D1A81B8B9}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

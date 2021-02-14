@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <appSettings>
+    <add key="ServerAddress" value="http://172.18.187.96:8731/Design_Time_Addresses/WCFDataCentreServer/Service1/"/>
+    <add key="NumberOfWeighingStations" value="0"/>
+    <add key="NumberOfWeighingStationsAllowed" value="10"/>
+  </appSettings>
+  <system.web>
+    <compilation debug="true" />
+  </system.web>
+  <!-- When deploying the service library project, the content of the config file must be added to the host's 
+  app.config file. System.Configuration does not support config files for libraries. -->
+  <system.serviceModel>
+    <services>
+      <service behaviorConfiguration="WCFDataCentreServer.Service1Behavior"
+        name="WCFDataCentreServer.DataService">
+        <endpoint address="" binding="wsHttpBinding" name="Data" contract="WCFDataCentreServer.IDataService">
+          <identity>
+            <dns value="localhost" />
+          </identity>
+        </endpoint>
+        <endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange" />
+        <host>
+          <baseAddresses>
+            <add baseAddress="http://localhost:8731/Design_Time_Addresses/WCFDataCentreServer/Service1/" />
+          </baseAddresses>
+        </host>
+      </service>
+    </services>
+    <behaviors>
+      <serviceBehaviors>
+        <behavior name="WCFDataCentreServer.Service1Behavior">
+          <serviceMetadata  httpGetEnabled="true" httpGetUrl=""/>
+          <serviceDebug httpHelpPageEnabled="true" includeExceptionDetailInFaults="true" />
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+  </system.serviceModel>
+</configuration>

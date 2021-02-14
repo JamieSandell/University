@@ -1,0 +1,55 @@
+﻿using System;
+using System.IO;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
+using System.Threading;
+
+/*
+TODO:
+A request from the client to the server for the server to query the database for a person’s location looks like this:
+<name><CR><LF>
+A request from the client to the server for the server to update the database with a new location for a person looks like this:
+<name><space><location><CR><LF>
+When the client requests the server to query the database for a person’s location and the server finds an entry in the database for that person the server responds like this:
+<location><CR><LF>
+<drop connection>
+Where: <location> is the location if found in the database for the person.
+When the client requests the server to query the database for a person’s location but the server is unable to find an entry in the database for that person the server responds like this:
+ERROR: no entries found<CR><LF>
+<drops connection>
+When the client sends a request to the server to update the database with a new location for a person the server responds like this:
+OK<CR><LF>
+<drops connection>
+server should give up and drop connection if they are left waiting more than 1 second (1000 milliseconds).
+The server could, at a minimum, do its job silently. It would be helpful if it reported activity, either to the command window, or to a specially designed administration interface. For example:
+
+G:\08241\> whereisserver
+
+request for cssbct
+
+replied in RB-321
+
+The more information that is recorded the better, and a good server should keep log files:
+
+200.4.239.13 - - [28/Dec/2003:03:14:56 +0000] "GET cssbct" OK
+150.237.92.99 - - [28/Dec/2003:03:15:23 +0000] "SET cssbct some room" OK
+150.237.92.99 - - [28/Dec/2003:03:19:24 +0000] "GET cshwvv" UNKNOWN
+
+This example is shown in "Standard Log Format". 
+
+Print everything to the server, so once someone has connected say "ip blah blah connected"
+For now when someone connects call call the server again, that way someone else can connect and when they
+do it will allow another person to connect
+*/
+
+namespace whereisserver
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            Server myServer = new Server();
+        }
+    }
+}

@@ -1,0 +1,87 @@
+8
+
+dir
+11
+https://wush.net/svn/nilrem
+https://wush.net/svn/nilrem
+
+
+
+
+
+
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+incomplete
+4775f01a-198e-4851-954d-c6c639c6bf09
+
+ACW Base Code
+dir
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+deleted
+
+LoggingSystem.suo
+file
+13
+
+
+
+2008-02-24T16:03:30.140000Z
+0ad846fe8657fafb729a496e0d7536bf
+2008-02-24T16:04:00.178168Z
+13
+nilrem
+has-props
+
+LoggingSystem.sln
+file
+12
+
+
+
+2008-02-22T16:13:07.218750Z
+3f81827dc04db594dbdb6ea722d69023
+2008-02-22T17:54:44.366743Z
+12
+nilrem
+
+2005
+dir
+
+
+
+add
+
+LoggingSystem
+dir
+

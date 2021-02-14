@@ -1,0 +1,85 @@
+8
+
+dir
+2
+https://wush.net/svn/nilrem/2nd_year/08220/miles/ProjectWork/StaffReportLibrary/StaffReport/StaffReport
+https://wush.net/svn/nilrem
+
+
+
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+
+svn:special svn:externals svn:needs-lock
+
+Employee.cs
+file
+
+
+
+
+2007-11-29T20:46:52.000000Z
+feacb84a9717b5035c9b6e0e974101ca
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+StaffReport.cs
+file
+
+
+
+
+2007-11-29T22:26:56.000000Z
+7192a093b39f24115a9ad8124c71a223
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+Task.cs
+file
+
+
+
+
+2007-11-29T22:24:22.000000Z
+2b9c48726332c71046955f9424ed793c
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+bin
+dir
+
+obj
+dir
+
+TaskAssign.cs
+file
+
+
+
+
+2007-11-29T22:24:22.000000Z
+1bb45ae15e98fdcfb8b6dd606e861b6d
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+Properties
+dir
+
+StaffReport.csproj
+file
+
+
+
+
+2007-11-29T22:24:22.000000Z
+af7b350d403d0131461cad522db37a03
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+

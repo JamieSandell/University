@@ -1,0 +1,23 @@
+Emitter
+--------
+emitter shape
+emitter height width and depth
+emitter position
+emitter maxParticlesAllowed
+emitter direction - xyz
+emitter angle(degrees) // e.g. 10 = 10 either side of the emitter 
+emitter duration
+emitter repeat
+
+
+Particle
+--------
+particle shape
+particle height width and depth
+particle blending mode
+particle startColour
+particle endColour
+particle gravity - xyz
+particle speed - xyz
+particle fadeMinimum
+particle fadeMaximum

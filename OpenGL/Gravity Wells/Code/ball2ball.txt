@@ -1,0 +1,38 @@
+void BallObject::WallCollision(const float dt)
+{
+	float ballRadius = 0.5;
+	
+	if(GetPosition().Length() >= 100.0000f - ballRadius)
+	{		
+		float a((GetPosition().Subtract(_oldPosition)).DotProduct(GetPosition().Subtract(_oldPosition)));
+		float b(2*((GetPosition().Subtract(_oldPosition)).DotProduct(_oldPosition.Subtract(Vector3f(0.0f,0.0f,0.0f)))));
+		float c((_oldPosition.Subtract(Vector3f(0.0f,0.0f,0.0f))).DotProduct(_oldPosition.Subtract(Vector3f(0.0f,0.0f,0.0f)))- ((100.0f-ballRadius)* (100.0f-ballRadius)));
+		float s = (b*b - 4.0f*a*c);
+		s = (s>0.0f ? sqrt(s) : 0.0f);
+
+		float u1 = (-b + s) / (2.0f * a);
+		float u2 = (-b - s) / (2.0f * a);
+
+		float collisionT = 0.0f;
+		if (u2 > 0.0f)
+			collisionT = (u2 < u1? u2:u1);
+		else if(u1>0.0f)
+			collisionT = (u1 < u1? u1:u2);
+
+		if (( 0.0f <= collisionT) && (collisionT <= 1.0f))
+		{
+		
+			SetPosition(_oldPosition.Add( GetPosition().Subtract(_oldPosition).Scale(collisionT)));
+
+			Vector3f wallnormal(GetPosition().Normalise().Scale(-1));
+		
+			collisionT *= dt;	
+
+			SetVelocity(GetVelocity().Subtract( wallnormal.Scale((GetVelocity().DotProduct(wallnormal))*(1+0.5)) ));
+			SetMovingState(SLIDING);SetTexture(1);SetAngularVel(0.0f,0.0f,0.0f);
+			float timeLeft = dt - collisionT;
+			Vector3f distance = GetVelocity().Scale(timeLeft);
+			SetPosition(GetPosition().Add( distance));
+		}	
+	}	
+}

@@ -1,0 +1,68 @@
+friction slide coefficient 0.2
+friction roll coefficient 0.03
+
+// Then we update the physics
+Vector3d sphereContactPoint, perimeterVelocity, frictionForce, accelaration, angularAccelaration;
+http://archive.ncsa.illinois.edu/Classes/MATH198/townsend/public/illiPool.c
+if(GetCurrentMovementState() != STATIONARY) // && inGame
+{
+	// UPDATE POSITION:
+	_position.Set(_position.GetX() + (_velocity.scaledBy(dt).GetX()),
+	_position.GetY() + (_velocity.scaledBy(dt).GetY()),
+	_position.GetZ() + (_velocity.scaledBy(dt).GetZ()));
+
+	_angularPosition.Set(_angularPosition.GetX() + (_angularVelocity.scaledBy(dt).GetX()),
+	_angularPosition.GetY() + (_angularVelocity.scaledBy(dt).GetY()),
+	_angularPosition.GetZ() + (_angularVelocity.scaledBy(dt).GetZ()));
+
+	if(GetCurrentMovementState() != STATIONARY)
+	{
+		// PHYSICS:
+		if(GetCurrentMovementState() == SLIDING)
+		{
+			sphereContactPoint = Vector3d(0.0f, 0.0f, -_radius);
+
+			// perimeter velocity of ball at contact point with felt.
+			perimeterVelocity = (_angularVelocity * sphereContactPoint) + _velocity;
+
+			frictionForce = perimeterVelocity.unit().scaledBy(-slideCoefficient * ballMass * gravity);
+			accelaration = frictionForce.scaledBy(1 / ballMass);
+			angularAccelaration = (sphereContactPoint * frictionForce).scaledBy(5 / (2 * ballMass * _radius * _radius));
+
+			_velocity = _velocity + accelaration.scaledBy(dt);
+			_angularVelocity = _angularVelocity + angularAccelaration.scaledBy(dt);
+
+			Vector3d newPerimeterVelocity = (_angularVelocity * sphereContactPoint) + _velocity;
+			float vpPar = perimeterVelocity.dot(perimeterVelocity - newPerimeterVelocity);
+			float vpPar2 = newPerimeterVelocity.dot(perimeterVelocity - newPerimeterVelocity);
+
+			if((vpPar > 0.0f && vpPar2 < 0.0f) ||
+			(vpPar2 > 0.0f && vpPar < 0.0f))
+			{
+				_velocity = _angularVelocity * sphereContactPoint;
+				SetCurrentMovementState(ROLLING);
+			}
+		}
+		else // Rolling
+		{
+			sphereContactPoint = Vector3d(0.0f, 0.0f, -_radius);
+			Vector3d oppositeSideContactPoint = Vector3d(0.0f, 0.0f, _radius);
+
+			perimeterVelocity = sphereContactPoint * _angularVelocity;
+
+			frictionForce = perimeterVelocity.unit().scaledBy(rollCoefficient * ballMass * gravity);
+
+			angularAccelaration = (sphereContactPoint * frictionForce).scaledBy(5 / (2 * ballMass * _radius * _radius));
+
+			_angularVelocity = _angularVelocity + angularAccelaration.scaledBy(dt);
+			_velocity = _angularVelocity * oppositeSideContactPoint;
+
+			if(_angularVelocity.magnitude() < 0.5 &&
+			_velocity.magnitude() < 0.05)
+			{
+				_velocity = Vector3d(0.0f, 0.0f, 0.0f);
+				SetCurrentMovementState(STATIONARY);
+			}
+		}
+	}
+}

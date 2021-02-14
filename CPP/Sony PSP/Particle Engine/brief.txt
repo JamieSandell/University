@@ -1,0 +1,24 @@
+Project Code: JHP1
+Title: Particle Engine for PSP. 
+
+Specification:
+This project is to produce a particle engine and tool for use on the PSP development kit. This will require the student to use an industry standard PSP development kit and SDK. The project is suitable for a proficient programmer and is ideal for someone hoping to work in the games industry. 
+
+
+
+Suitable Degree Programs:
+Computer Science with Games Development
+Computer Science
+Software Engineering
+
+
+System Environments and Hardware/Software requirements:
+
+
+Ratings: Research: 3 
+Analysis: 4 
+Design: 4 
+Implementation Volume: 3 
+Implementation Intensity: 4 
+Significant Element of Mathematical Work: Yes 
+

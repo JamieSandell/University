@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototype", "Prototype\Prototype.csproj", "{894ED517-7B8B-43CF-A7AC-956D5537D911}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{26D6D8FF-E957-4A91-A4F9-2F1A67E202B6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{894ED517-7B8B-43CF-A7AC-956D5537D911}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{894ED517-7B8B-43CF-A7AC-956D5537D911}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{894ED517-7B8B-43CF-A7AC-956D5537D911}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{894ED517-7B8B-43CF-A7AC-956D5537D911}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26D6D8FF-E957-4A91-A4F9-2F1A67E202B6}.Debug|Any CPU.ActiveCfg = Release
+		{26D6D8FF-E957-4A91-A4F9-2F1A67E202B6}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

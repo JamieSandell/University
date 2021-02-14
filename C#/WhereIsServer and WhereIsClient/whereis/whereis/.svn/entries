@@ -1,0 +1,97 @@
+8
+
+dir
+1
+https://wush.net/svn/nilrem/whereis
+https://wush.net/svn/nilrem
+
+
+
+2008-02-13T10:44:52.383317Z
+1
+nilrem
+
+
+svn:special svn:externals svn:needs-lock
+
+whereis.csproj.user
+file
+16
+
+
+
+2008-02-26T17:36:38.296875Z
+566a1519f91138961979583049247082
+2008-02-28T12:34:07.390745Z
+16
+nilrem
+
+Form1.resx
+file
+
+
+
+
+2008-02-26T13:46:10.000000Z
+27c39908c10affa164a4242e0363eda4
+2008-02-13T10:44:52.383317Z
+1
+nilrem
+
+whereis.csproj
+file
+16
+
+
+
+2008-02-26T15:51:02.859375Z
+14a0e7662e73ad84e620c259122e1dc4
+2008-02-28T12:34:07.390745Z
+16
+nilrem
+
+Form1.Designer.cs
+file
+
+
+
+
+2008-02-26T13:46:10.000000Z
+6f72137138f6b45c6a610625b704f36a
+2008-02-13T10:44:52.383317Z
+1
+nilrem
+
+bin
+dir
+
+Form1.cs
+file
+
+
+
+
+2008-02-26T13:46:10.000000Z
+9e331181e7bd865f05fa1d4c1a63fc7d
+2008-02-13T10:44:52.383317Z
+1
+nilrem
+
+obj
+dir
+
+Program.cs
+file
+17
+
+
+
+2008-02-28T13:23:15.656250Z
+9d3f4a98edf39ae5a7d4bde826d8d105
+2008-02-28T14:19:43.225718Z
+17
+nilrem
+
+Properties
+dir
+

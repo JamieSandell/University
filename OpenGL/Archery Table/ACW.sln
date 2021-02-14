@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ACW", "ACW\ACW.vcxproj", "{BE2856E7-03D4-4174-B750-C781BBFB2428}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE2856E7-03D4-4174-B750-C781BBFB2428}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BE2856E7-03D4-4174-B750-C781BBFB2428}.Debug|Win32.Build.0 = Debug|Win32
+		{BE2856E7-03D4-4174-B750-C781BBFB2428}.Release|Win32.ActiveCfg = Release|Win32
+		{BE2856E7-03D4-4174-B750-C781BBFB2428}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {98700078-D178-4175-A457-D66E6BF58206}
+	EndGlobalSection
+EndGlobal

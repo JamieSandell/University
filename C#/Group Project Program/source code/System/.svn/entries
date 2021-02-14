@@ -1,0 +1,65 @@
+8
+
+dir
+2
+https://wush.net/svn/nilrem/2nd_year/08220/miles/group%20project%20program/source%20code/System
+https://wush.net/svn/nilrem
+
+
+
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+
+svn:special svn:externals svn:needs-lock
+
+System.sln
+file
+
+
+
+
+2008-02-04T16:20:08.000000Z
+7bc4b7e9fce64186053a665bf5cc259f
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+WindowsApplication2
+dir
+
+_UpgradeReport_Files
+dir
+
+System
+dir
+
+Backup
+dir
+
+UpgradeLog.XML
+file
+
+
+
+
+2008-02-04T16:20:08.000000Z
+c59acde80ecadbe41b6c9a9aa8a3d521
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+System.suo
+file
+4
+
+
+
+2008-02-13T14:26:02.859000Z
+421ee8ca7617987e9a59629d93fc07b5
+2008-02-13T17:17:01.262243Z
+4
+nilrem
+has-props
+

@@ -1,0 +1,44 @@
+8
+
+dir
+2
+https://wush.net/svn/nilrem/2nd_year/08241/whereisserver
+https://wush.net/svn/nilrem
+
+
+
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+
+svn:special svn:externals svn:needs-lock
+
+whereisserver.suo
+file
+6
+
+
+
+2008-02-19T17:19:18.125000Z
+1faf73da83c40301cf302b748f5d548f
+2008-02-19T17:23:29.743627Z
+6
+nilrem
+has-props
+
+whereisserver.sln
+file
+
+
+
+
+2008-02-11T15:32:00.718750Z
+157ceebf9354f44e382f236e52fcb07e
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+whereisserver
+dir
+

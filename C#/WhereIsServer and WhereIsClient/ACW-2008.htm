@@ -1,0 +1,1878 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="08241ACWcover2008_files/filelist.xml">
+<title>08241/08241 Computer Networking ACW</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Brian Tompsett</o:Author>
+  <o:Template>ACW specification template 07-08.dot</o:Template>
+  <o:LastAuthor>Brian Tompsett</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>4743</o:TotalTime>
+  <o:LastPrinted>2007-08-28T13:22:00Z</o:LastPrinted>
+  <o:Created>2007-09-25T15:33:00Z</o:Created>
+  <o:LastSaved>2007-09-25T15:33:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>626</o:Words>
+  <o:Characters>3572</o:Characters>
+  <o:Company>University of Hull</o:Company>
+  <o:Lines>29</o:Lines>
+  <o:Paragraphs>8</o:Paragraphs>
+  <o:CharactersWithSpaces>4190</o:CharactersWithSpaces>
+  <o:Version>10.6830</o:Version>
+ </o:DocumentProperties>
+ <o:CustomDocumentProperties>
+  <o:_AdHocReviewCycleID dt:dt="float">-583588598</o:_AdHocReviewCycleID>
+  <o:_EmailSubject dt:dt="string">ACW specification template</o:_EmailSubject>
+  <o:_AuthorEmail dt:dt="string">W.J.Viant@dcs.hull.ac.uk</o:_AuthorEmail>
+  <o:_AuthorEmailDisplayName dt:dt="string">Warren Viant</o:_AuthorEmailDisplayName>
+  <o:_ReviewingToolsShownOnce dt:dt="string"></o:_ReviewingToolsShownOnce>
+ </o:CustomDocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:AttachedTemplate
+   HRef="C:\DOCUME~1\cssbct\LOCALS~1\Temp\ACW specification template 07-08.dot"></w:AttachedTemplate>
+  <w:DocumentProtection>Forms</w:DocumentProtection>
+  <w:DoNotHyphenateCaps/>
+  <w:PunctuationKerning/>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:Compatibility>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+   <w:UseWord97LineBreakingRules/>
+  </w:Compatibility>
+  <w:DocumentVariables>
+   <w:iMemoStyle>2</w:iMemoStyle>
+   <w:Memo_x0020_Post_x0020_Wizard_x0020_Balloon>1</w:Memo_x0020_Post_x0020_Wizard_x0020_Balloon>
+  </w:DocumentVariables>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+	{font-family:"Arial Unicode MS";
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:3 0 0 0 1 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:553679495 -2147483648 8 0 66047 0;}
+@font-face
+	{font-family:Garamond;
+	panose-1:2 2 4 4 3 3 1 1 8 3;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:Garamond;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:Garamond;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
+h1
+	{mso-style-next:"Body Text";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:9.0pt;
+	margin-left:0in;
+	text-align:center;
+	line-height:12.0pt;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:10.5pt;
+	font-family:Garamond;
+	mso-bidi-font-family:Garamond;
+	font-variant:small-caps;
+	letter-spacing:1.0pt;
+	mso-font-kerning:10.0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
+	font-weight:normal;}
+h2
+	{mso-style-next:"Body Text";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.5pt;
+	margin-left:0in;
+	line-height:12.0pt;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:11.0pt;
+	font-family:Garamond;
+	mso-bidi-font-family:Garamond;
+	text-transform:uppercase;
+	mso-font-kerning:10.0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
+	font-weight:normal;}
+h3
+	{mso-style-next:"Body Text";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:0in;
+	line-height:12.0pt;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:11.0pt;
+	font-family:Garamond;
+	mso-bidi-font-family:Garamond;
+	mso-font-kerning:10.0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
+	font-weight:normal;
+	font-style:italic;}
+h4
+	{mso-style-next:"Body Text";
+	margin:0in;
+	margin-bottom:.0001pt;
+	line-height:12.0pt;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:11.5pt;
+	font-family:Garamond;
+	mso-bidi-font-family:Garamond;
+	font-variant:small-caps;
+	mso-font-kerning:10.0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
+	font-weight:normal;}
+h5
+	{mso-style-next:"Body Text";
+	margin:0in;
+	margin-bottom:.0001pt;
+	line-height:12.0pt;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:5;
+	font-size:11.0pt;
+	font-family:Garamond;
+	mso-bidi-font-family:Garamond;
+	mso-font-kerning:10.0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
+	font-weight:normal;}
+p.MsoNormalIndent, li.MsoNormalIndent, div.MsoNormalIndent
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:Garamond;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:Garamond;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-parent:"Header Base";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:33.0pt;
+	margin-left:0in;
+	text-align:center;
+	line-height:12.0pt;
+	mso-pagination:widow-orphan lines-together;
+	tab-stops:center 3.0in right 6.0in;
+	font-size:11.0pt;
+	font-family:Garamond;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:Garamond;
+	font-variant:small-caps;
+	mso-font-kerning:9.0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-parent:"Header Base";
+	margin-top:30.0pt;
+	margin-right:-12.0pt;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	line-height:12.0pt;
+	mso-pagination:widow-orphan lines-together;
+	tab-stops:center 3.0in right 6.0in;
+	font-size:11.0pt;
+	font-family:Garamond;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:Garamond;
+	mso-font-kerning:9.0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
+span.MsoPageNumber
+	{font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoClosing, li.MsoClosing, div.MsoClosing
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	line-height:11.0pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:Garamond;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:Garamond;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
+p.MsoSignature, li.MsoSignature, div.MsoSignature
+	{mso-style-parent:"Body Text";
+	mso-style-next:Normal;
+	margin-top:33.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:.25in;
+	line-height:12.0pt;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:Garamond;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:Garamond;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:.25in;
+	line-height:12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:Garamond;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:Garamond;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
+p.MsoMessageHeader, li.MsoMessageHeader, div.MsoMessageHeader
+	{mso-style-parent:"Body Text";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.75in;
+	text-indent:-.75in;
+	line-height:12.0pt;
+	mso-pagination:widow-orphan lines-together;
+	font-size:9.0pt;
+	font-family:Garamond;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:Garamond;
+	text-transform:uppercase;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
+a:link, span.MsoHyperlink
+	{font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
+p.CompanyName, li.CompanyName, div.CompanyName
+	{mso-style-name:"Company Name";
+	mso-style-parent:"Body Text";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:2.0pt;
+	margin-left:0in;
+	text-align:center;
+	line-height:12.0pt;
+	mso-pagination:widow-orphan lines-together;
+	mso-element:frame;
+	mso-element-frame-width:6.0in;
+	mso-element-frame-height:1.0in;
+	mso-element-wrap:no-wrap-beside;
+	mso-element-anchor-vertical:page;
+	mso-element-anchor-horizontal:margin;
+	mso-element-left:center;
+	mso-element-top:44.45pt;
+	font-size:11.0pt;
+	font-family:Garamond;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:Garamond;
+	text-transform:uppercase;
+	letter-spacing:3.75pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
+p.DocumentLabel, li.DocumentLabel, div.DocumentLabel
+	{mso-style-name:"Document Label";
+	mso-style-parent:"";
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:2.0pt;
+	margin-left:0in;
+	text-align:center;
+	line-height:12.0pt;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-top-alt:double gray 2.25pt;
+	mso-border-bottom-alt:double gray 2.25pt;
+	padding:0in;
+	mso-padding-alt:8.0pt 0in 8.0pt 0in;
+	font-size:9.0pt;
+	font-family:Garamond;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:Garamond;
+	text-transform:uppercase;
+	letter-spacing:1.0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
+	font-weight:bold;}
+p.Enclosure, li.Enclosure, div.Enclosure
+	{mso-style-name:Enclosure;
+	mso-style-parent:"Body Text";
+	mso-style-next:Normal;
+	margin-top:11.0pt;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:0in;
+	text-align:justify;
+	line-height:12.0pt;
+	mso-pagination:widow-orphan lines-together;
+	font-size:11.0pt;
+	font-family:Garamond;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:Garamond;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
+p.HeaderBase, li.HeaderBase, div.HeaderBase
+	{mso-style-name:"Header Base";
+	mso-style-parent:"Body Text";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:.25in;
+	line-height:12.0pt;
+	mso-pagination:widow-orphan lines-together;
+	tab-stops:center 3.0in right 6.0in;
+	font-size:11.0pt;
+	font-family:Garamond;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:Garamond;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
+p.HeadingBase, li.HeadingBase, div.HeadingBase
+	{mso-style-name:"Heading Base";
+	mso-style-parent:"Body Text";
+	mso-style-next:"Body Text";
+	margin:0in;
+	margin-bottom:.0001pt;
+	line-height:12.0pt;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:Garamond;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:Garamond;
+	mso-font-kerning:10.0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
+p.MessageHeaderFirst, li.MessageHeaderFirst, div.MessageHeaderFirst
+	{mso-style-name:"Message Header First";
+	mso-style-parent:"Message Header";
+	mso-style-next:"Message Header";
+	margin-top:.25in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.75in;
+	text-indent:-.75in;
+	line-height:12.0pt;
+	mso-pagination:widow-orphan lines-together;
+	font-size:9.0pt;
+	font-family:Garamond;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:Garamond;
+	text-transform:uppercase;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
+span.MessageHeaderLabel
+	{mso-style-name:"Message Header Label";
+	mso-style-parent:"";
+	mso-ansi-font-size:9.0pt;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.MessageHeaderLast, li.MessageHeaderLast, div.MessageHeaderLast
+	{mso-style-name:"Message Header Last";
+	mso-style-parent:"Message Header";
+	mso-style-next:"Body Text";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:.25in;
+	margin-left:.75in;
+	text-indent:-.75in;
+	line-height:12.0pt;
+	mso-pagination:widow-orphan lines-together;
+	border:none;
+	mso-border-bottom-alt:solid gray .75pt;
+	padding:0in;
+	mso-padding-alt:0in 0in .25in 0in;
+	font-size:9.0pt;
+	font-family:Garamond;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:Garamond;
+	text-transform:uppercase;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
+p.ReturnAddress, li.ReturnAddress, div.ReturnAddress
+	{mso-style-name:"Return Address";
+	mso-style-parent:"";
+	margin-top:0in;
+	margin-right:-12.0pt;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	line-height:12.0pt;
+	mso-pagination:widow-orphan;
+	mso-element:frame;
+	mso-element-frame-width:6.0in;
+	mso-element-wrap:no-wrap-beside;
+	mso-element-anchor-vertical:page;
+	mso-element-anchor-horizontal:page;
+	mso-element-left:86.45pt;
+	mso-element-top:720.05pt;
+	mso-height-rule:exactly;
+	mso-element-anchor-lock:locked;
+	font-size:7.5pt;
+	font-family:Garamond;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:Garamond;
+	text-transform:uppercase;
+	letter-spacing:1.5pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
+p.SignatureJobTitle, li.SignatureJobTitle, div.SignatureJobTitle
+	{mso-style-name:"Signature Job Title";
+	mso-style-parent:Signature;
+	mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	line-height:12.0pt;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:Garamond;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:Garamond;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
+p.SignatureName, li.SignatureName, div.SignatureName
+	{mso-style-name:"Signature Name";
+	mso-style-parent:Signature;
+	mso-style-next:"Signature Job Title";
+	margin-top:33.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	line-height:12.0pt;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:Garamond;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:Garamond;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
+span.Slogan
+	{mso-style-name:Slogan;
+	mso-ansi-font-size:10.5pt;
+	mso-bidi-font-size:10.5pt;
+	font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	letter-spacing:3.5pt;
+	font-style:italic;}
+ /* Page Definitions */
+ @page
+	{mso-footnote-separator:url("08241ACWcover2007_files/header.htm") fs;
+	mso-footnote-continuation-separator:url("08241ACWcover2007_files/header.htm") fcs;
+	mso-endnote-separator:url("08241ACWcover2007_files/header.htm") es;
+	mso-endnote-continuation-separator:url("08241ACWcover2007_files/header.htm") ecs;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:42.55pt 45.1pt 28.4pt 49.6pt;
+	mso-header-margin:7.65pt;
+	mso-footer-margin:0in;
+	mso-even-footer:url("08241ACWcover2007_files/header.htm") ef1;
+	mso-footer:url("08241ACWcover2007_files/header.htm") f1;
+	mso-first-footer:url("08241ACWcover2007_files/header.htm") ff1;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:1011954382;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1
+	{mso-list-id:2095861049;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l1:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	mso-bidi-font-family:"Times New Roman";}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-GB link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<p class=MsoPlainText align=center style='text-align:center'><b><span
+lang=EN-US style='font-size:12.0pt;font-family:Arial'>DEPARTMENT OF COMPUTER
+SCIENCE<o:p></o:p></span></b></p>
+
+<p class=MsoPlainText align=center style='text-align:center'><b><u><span
+lang=EN-US style='font-family:Arial'><o:p><span style='text-decoration:none'>&nbsp;</span></o:p></span></u></b></p>
+
+<p class=MsoPlainText align=center style='text-align:center'><b><span
+lang=EN-US style='font-size:12.0pt;font-family:Arial;text-transform:uppercase'>Coursework
+Assessment Specification<o:p></o:p></span></b></p>
+
+<p class=MsoPlainText><b><span lang=EN-US style='font-family:Arial'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoPlainText><b><span lang=EN-US style='font-size:12.0pt;font-family:
+Arial'>MODULE DETAILS:<o:p></o:p></span></b></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=500
+ style='width:450pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-border-insideh:.5pt solid windowtext;
+ mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0'>
+  <td width=168 style='width:125.85pt;border:solid windowtext 1.0pt;mso-border-alt:
+  solid windowtext .5pt;background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='tab-stops:center 212.65pt'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;color:black'>Module Number:<o:p></o:p></span></p>
+  <p class=MsoNormal style='tab-stops:center 212.65pt'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;color:black'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=208 style='width:156.0pt;border:solid windowtext 1.0pt;border-left:
+  none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><!--[if supportFields]><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial;color:black'><span
+  style='mso-element:field-begin'></span><span style='mso-bookmark:Text17'><span
+  style='mso-spacerun:yes'>Â </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text17'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial;color:black'><![if !supportNestedAnchors]><a name=Text17></a><![endif]><span
+  style='mso-no-proof:yes'>08241/08246<o:p></o:p></span></span></span></p>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><span
+  style='mso-bookmark:Text17'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial;color:black'><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00000000140006005400650078007400310037000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text17'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text17'></span><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial;color:black'><o:p></o:p></span></p>
+  </td>
+  <td width=94 valign=top style='width:70.85pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#F3F3F3;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='tab-stops:center 212.65pt'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;color:black'>Semester:<o:p></o:p></span></p>
+  </td>
+  <td width=227 style='width:170.1pt;border:solid windowtext 1.0pt;border-left:
+  none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'>2<!--[if supportFields]><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial;color:black'><span
+  style='mso-element:field-begin'></span><span
+  style='mso-spacerun:yes'>Â </span>FORMDROPDOWN </span><![endif]--><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial;color:black'><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF0E80000000000000000000000000000000000000000000000000000000000000FFFF040000000F00200070006C0065006100730065002000730065006C0065006300740020000300200031002000090020003100200061006E0064002000320020000300200032002000</w:data>
+  </xml><![endif]--></span><!--[if supportFields]><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;color:black'><span
+  style='mso-element:field-end'></span></span><![endif]--><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;color:black'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=168 style='width:125.85pt;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='tab-stops:center 212.65pt'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;color:black'>Module Title:<o:p></o:p></span></p>
+  <p class=MsoNormal style='tab-stops:center 212.65pt'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;color:black'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=529 colspan=3 style='width:396.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><!--[if supportFields]><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial;color:black'><span
+  style='mso-element:field-begin'></span><span style='mso-bookmark:Text18'><span
+  style='mso-spacerun:yes'>Â </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text18'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial;color:black'><![if !supportNestedAnchors]><a name=Text18></a><![endif]><span
+  style='mso-no-proof:yes'>Networking</span><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00000000140006005400650078007400310038000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text18'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text18'></span><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial;color:black'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+  <td width=168 style='width:125.85pt;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='tab-stops:center 212.65pt'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;color:black'>Lecturer:<o:p></o:p></span></p>
+  <p class=MsoNormal style='tab-stops:center 212.65pt'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;color:black'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=529 colspan=3 style='width:396.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><!--[if supportFields]><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial;color:black'><span
+  style='mso-element:field-begin'></span><span style='mso-bookmark:Text19'><span
+  style='mso-spacerun:yes'>Â </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text19'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial;color:black'><![if !supportNestedAnchors]><a name=Text19></a><![endif]><span
+  style='mso-no-proof:yes'>BCT</span><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00000000140006005400650078007400310039000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text19'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text19'></span><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial;color:black'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:10.0pt;font-family:Arial;color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:Arial;color:black'>COURSEWORK DETAILS:<o:p></o:p></span></b></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=680
+ style='width:450pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-border-insideh:.5pt solid windowtext;
+ mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0'>
+  <td width=168 style='width:125.85pt;border:solid windowtext 1.0pt;mso-border-alt:
+  solid windowtext .5pt;background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='tab-stops:center 212.65pt'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;color:black'>Coursework Assessment
+  Number:<o:p></o:p></span></p>
+  </td>
+  <td width=208 style='width:156.0pt;border:solid windowtext 1.0pt;border-left:
+  none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>1
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><a
+  name=Dropdown3></a><!--[if supportFields]><span style='mso-bookmark:Dropdown3'></span><span
+  style='mso-element:field-begin'></span><span style='mso-bookmark:Dropdown3'><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial;color:black'><span
+  style='mso-spacerun:yes'>Â </span>FORMDROPDOWN </span></span><![endif]--><span
+  style='mso-bookmark:Dropdown3'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial;color:black'><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF0680000000000900440072006F00700064006F0077006E003300000000000000000000000000000000000000000000000000FFFF060000000F00200070006C0065006100730065002000730065006C00650063007400200003002000310020000300200032002000030020003300200003002000340020000300200035002000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Dropdown3'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Dropdown3'></span><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial;color:black'><o:p></o:p></span></p>
+  </td>
+  <td width=94 colspan=2 style='width:70.85pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#F3F3F3;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial;color:black'>of<o:p></o:p></span></p>
+  </td>
+  <td width=227 colspan=4 style='width:170.1pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>2
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><a
+  name=Dropdown4></a><!--[if supportFields]><span style='mso-bookmark:Dropdown4'></span><span
+  style='mso-element:field-begin'></span><span style='mso-bookmark:Dropdown4'><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial;color:black'><span
+  style='mso-spacerun:yes'>Â </span>FORMDROPDOWN </span></span><![endif]--><span
+  style='mso-bookmark:Dropdown4'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial;color:black'><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF0680000000000900440072006F00700064006F0077006E003400000000000000000000000000000000000000000000000000FFFF060000000F00200070006C0065006100730065002000730065006C00650063007400200003002000310020000300200032002000030020003300200003002000340020000300200035002000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Dropdown4'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Dropdown4'></span><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial;color:black'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=168 style='width:125.85pt;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='tab-stops:center 212.65pt'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;color:black'>Title of Assignment:<o:p></o:p></span></p>
+  <p class=MsoNormal style='tab-stops:center 212.65pt'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;color:black'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=529 colspan=7 style='width:396.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><!--[if supportFields]><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial;color:black'><span
+  style='mso-element:field-begin'></span><span style='mso-bookmark:Text20'><span
+  style='mso-spacerun:yes'>Â </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text20'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial;color:black'><![if !supportNestedAnchors]><a name=Text20></a><![endif]><span
+  style='mso-no-proof:yes'>Client &amp; Server in C#</span><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00000000140006005400650078007400320030000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text20'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text20'></span><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial;color:black'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=168 style='width:125.85pt;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='tab-stops:center 212.65pt'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;color:black'>Format:<o:p></o:p></span></p>
+  <p class=MsoNormal style='tab-stops:center 212.65pt'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=208 style='width:156.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>Report
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><a
+  name=Dropdown2></a><!--[if supportFields]><span style='mso-bookmark:Dropdown2'></span><span
+  style='mso-element:field-begin'></span><span style='mso-bookmark:Dropdown2'><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial;color:black'><span
+  style='mso-spacerun:yes'>Â </span>FORMDROPDOWN </span></span><![endif]--><span
+  style='mso-bookmark:Dropdown2'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial;color:black'><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF16C1000000000900440072006F00700064006F0077006E003200000000000000000000000000130050006C006500610073006500200064006F00750062006C006500200063006B00690063006B0000000000000000000000FFFF060000000F00200070006C0065006100730065002000730065006C0065006300740020000F002000440065006D006F006E007300740072006100740069006F006E0020000F00200049006E00200063006C006100730073002000740065007300740020000E002000500072006500730065006E0074006100740069006F006E00200009002000500072006F006700720061006D002000080020005200650070006F00720074002000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Dropdown2'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Dropdown2'></span><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial'><o:p></o:p></span></p>
+  </td>
+  <td width=170 colspan=4 style='width:127.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>Program
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><!--[if supportFields]><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial;color:black'><span
+  style='mso-element:field-begin'></span><span
+  style='mso-spacerun:yes'>Â </span>FORMDROPDOWN </span><![endif]--><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial;color:black'><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF66C1000000000000000000000000000000000000130050006C006500610073006500200064006F00750062006C006500200063006B00690063006B0000000000000000000000FFFF070000000C00200032006E006400200066006F0072006D0061007400200009002000200020002000200020002000200020000F002000440065006D006F006E007300740072006100740069006F006E0020000F00200049006E00200063006C006100730073002000740065007300740020000E002000500072006500730065006E0074006100740069006F006E00200009002000500072006F006700720061006D002000080020005200650070006F00720074002000</w:data>
+  </xml><![endif]--></span><!--[if supportFields]><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;color:black'><span
+  style='mso-element:field-end'></span></span><![endif]--><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial'><o:p></o:p></span></p>
+  </td>
+  <td width=151 colspan=2 style='width:113.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><!--[if supportFields]><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial;color:black'><span
+  style='mso-element:field-begin'></span><span
+  style='mso-spacerun:yes'>Â </span>FORMDROPDOWN </span><![endif]--><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial;color:black'><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF16C1000000000000000000000000000000000000130050006C006500610073006500200064006F00750062006C006500200063006B00690063006B0000000000000000000000FFFF070000000C002000330072006400200066006F0072006D0061007400200009002000200020002000200020002000200020000F002000440065006D006F006E007300740072006100740069006F006E0020000F00200049006E00200063006C006100730073002000740065007300740020000E002000500072006500730065006E0074006100740069006F006E00200009002000500072006F006700720061006D002000080020005200650070006F00720074002000</w:data>
+  </xml><![endif]--></span><!--[if supportFields]><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;color:black'><span
+  style='mso-element:field-end'></span></span><![endif]--><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=168 style='width:125.85pt;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='tab-stops:center 212.65pt'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;color:black'>Method of Working:<o:p></o:p></span></p>
+  <p class=MsoNormal style='tab-stops:center 212.65pt'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;color:black'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=529 colspan=7 style='width:396.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>Individual
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><!--[if supportFields]><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial;color:black'><span
+  style='mso-element:field-begin'></span><span
+  style='mso-spacerun:yes'>Â </span>FORMDROPDOWN </span><![endif]--><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial;color:black'><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF06C1000000000000000000000000000000000000130050006C006500610073006500200064006F00750062006C006500200063006B00690063006B0000000000000000000000FFFF030000000F00200070006C0065006100730065002000730065006C0065006300740020000C00200049006E0064006900760069006400750061006C00200007002000470072006F00750070002000</w:data>
+  </xml><![endif]--></span><!--[if supportFields]><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;color:black'><span
+  style='mso-element:field-end'></span></span><![endif]--><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;color:black'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;mso-yfti-lastrow:yes;height:38.65pt'>
+  <td width=168 valign=top style='width:125.85pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt;height:38.65pt'>
+  <p class=MsoNormal style='tab-stops:center 212.65pt'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;mso-bidi-font-weight:bold'>Workload
+  Guidance: </span><span lang=EN-US style='font-size:12.0pt;font-family:Arial'><span
+  style='mso-spacerun:yes'></span><o:p></o:p></span></p>
+  </td>
+  <td width=208 style='width:156.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;background:#F3F3F3;padding:0in 5.4pt 0in 5.4pt;
+  height:38.65pt'>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial'>Typically, you should
+  expect to spend between<o:p></o:p></span></p>
+  </td>
+  <td width=85 style='width:63.75pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:38.65pt'>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><!--[if supportFields]><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial'><span style='mso-element:
+  field-begin'></span><span style='mso-bookmark:Text21'><span
+  style='mso-spacerun:yes'>Â </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text21'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial'><![if !supportNestedAnchors]><a name=Text21></a><![endif]><span
+  style='mso-no-proof:yes'>30</span><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00000000140006005400650078007400320031000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text21'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text21'></span><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial'><o:p></o:p></span></p>
+  </td>
+  <td width=47 colspan=2 style='width:35.45pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;background:#F3F3F3;padding:0in 5.4pt 0in 5.4pt;
+  height:38.65pt'>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial'>and<o:p></o:p></span></p>
+  </td>
+  <td width=76 colspan=2 style='width:56.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:38.65pt'>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><!--[if supportFields]><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial'><span style='mso-element:
+  field-begin'></span><span style='mso-bookmark:Text22'><span
+  style='mso-spacerun:yes'>Â </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text22'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial'><![if !supportNestedAnchors]><a name=Text22></a><![endif]><span
+  style='mso-no-proof:yes'>40</span><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00000000140006005400650078007400320032000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text22'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text22'></span><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial'><o:p></o:p></span></p>
+  </td>
+  <td width=113 style='width:85.05pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;background:#F3F3F3;padding:0in 5.4pt 0in 5.4pt;
+  height:38.65pt'>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial'>hours on this
+  assessment<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <![if !supportMisalignedColumns]>
+ <tr height=0>
+  <td width=201 style='border:none'></td>
+  <td width=249 style='border:none'></td>
+  <td width=102 style='border:none'></td>
+  <td width=11 style='border:none'></td>
+  <td width=45 style='border:none'></td>
+  <td width=45 style='border:none'></td>
+  <td width=45 style='border:none'></td>
+  <td width=136 style='border:none'></td>
+ </tr>
+ <![endif]>
+</table>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:Arial'>PUBLICATION:<o:p></o:p></span></b></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=680
+ style='width:450pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-border-insideh:.5pt solid windowtext;
+ mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-lastrow:yes'>
+  <td width=168 style='width:125.85pt;border:solid windowtext 1.0pt;mso-border-alt:
+  solid windowtext .5pt;background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><span lang=EN-US style='font-size:12.0pt;font-family:
+  Arial;mso-bidi-font-weight:bold'>Date of issue:<o:p></o:p></span></p>
+  <p class=MsoPlainText><span lang=EN-US style='font-size:12.0pt;font-family:
+  Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=529 style='width:396.95pt;border:solid windowtext 1.0pt;border-left:
+  none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><!--[if supportFields]><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial'><span style='mso-element:
+  field-begin'></span><span style='mso-bookmark:Text7'><span
+  style='mso-spacerun:yes'>Â </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text7'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial'><![if !supportNestedAnchors]><a name=Text7></a><![endif]><span
+  style='mso-no-proof:yes'>29th January 2008</span><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF0000000014000500540065007800740037000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text7'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text7'></span><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:Arial'>SUBMISSION:<o:p></o:p></span></b></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=680
+ style='width:450pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-border-insideh:.5pt solid windowtext;
+ mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0'>
+  <td width=168 style='width:125.85pt;border:solid windowtext 1.0pt;mso-border-alt:
+  solid windowtext .5pt;background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='tab-stops:center 212.65pt'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial'>ONE copy of this assignment should
+  be handed in via:<o:p></o:p></span></p>
+  </td>
+  <td width=208 style='width:156.0pt;border:solid windowtext 1.0pt;border-left:
+  none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>White Box
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><a
+  name=Dropdown5></a><!--[if supportFields]><span style='mso-bookmark:Dropdown5'></span><span
+  style='mso-element:field-begin'></span><span style='mso-bookmark:Dropdown5'><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial'><span
+  style='mso-spacerun:yes'>Â </span>FORMDROPDOWN </span></span><![endif]--><span
+  style='mso-bookmark:Dropdown5'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial'><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF0A80000000000900440072006F00700064006F0077006E003500000000000000000000000000000000000000000000000000FFFF040000000F00200070006C0065006100730065002000730065006C0065006300740020000E00200043006C00610073007300200053006500720076006500720020000B00200057006800690074006500200042006F0078002000070020004F0074006800650072002000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Dropdown5'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Dropdown5'></span><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial'><o:p></o:p></span></p>
+  </td>
+  <td width=170 style='width:127.55pt;border:solid windowtext 1.0pt;border-left:
+  none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  background:#F3F3F3;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial'>Other<o:p></o:p></span></p>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial'>(please state method)<o:p></o:p></span></p>
+  </td>
+  <td width=151 style='width:113.4pt;border:solid windowtext 1.0pt;border-left:
+  none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><a
+  name=Text10></a><!--[if supportFields]><span style='mso-bookmark:Text10'></span><span
+  style='mso-element:field-begin'></span><span style='mso-bookmark:Text10'><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial'><span
+  style='mso-spacerun:yes'>Â </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text10'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial'><span style='mso-no-proof:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00000000140006005400650078007400310030000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text10'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text10'></span><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=168 style='width:125.85pt;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='tab-stops:center 212.65pt'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;mso-bidi-font-weight:bold'>Time and
+  date for submission:<o:p></o:p></span></p>
+  <p class=MsoNormal style='tab-stops:center 212.65pt'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;mso-bidi-font-weight:bold'><span
+  style='mso-spacerun:yes'></span></span><span lang=EN-US style='font-size:
+  12.0pt;font-family:Arial'><o:p></o:p></span></p>
+  </td>
+  <td width=208 style='width:156.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><!--[if supportFields]><b
+  style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial'><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text46'><span style='mso-spacerun:yes'>Â </span>FORMTEXT <span
+  style='mso-element:field-separator'></span></span></span></b><![endif]--><span
+  style='mso-bookmark:Text46'><b style='mso-bidi-font-weight:normal'><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial'><![if !supportNestedAnchors]><a
+  name=Text46></a><![endif]><span style='mso-no-proof:yes'>9:30am</span><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00000000140006005400650078007400340036000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></b></span><!--[if supportFields]><span
+  style='mso-bookmark:Text46'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text46'></span><b style='mso-bidi-font-weight:normal'><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial'><o:p></o:p></span></b></p>
+  </td>
+  <td width=321 colspan=2 style='width:240.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><!--[if supportFields]><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial'><span style='mso-element:
+  field-begin'></span><span style='mso-bookmark:Text9'><span
+  style='mso-spacerun:yes'>Â </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text9'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial'><![if !supportNestedAnchors]><a name=Text9></a><![endif]><span
+  style='mso-no-proof:yes'>Monday 31<sup>th</sup> March 2008</span><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF0000000014000500540065007800740039000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text9'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text9'></span><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+  <td width=168 style='width:125.85pt;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='tab-stops:center 212.65pt'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;mso-bidi-font-weight:bold'>If <b>multiple
+  hand-ins</b> please provide details<o:p></o:p></span></p>
+
+  </td>
+  <td width=529 colspan=3 style='width:396.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial'><span style='mso-field-code:
+  " FORMTEXT "'><span style='mso-no-proof:yes'>The stages of the work should be
+  demonstrated in the labs for feedback</span><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF0000000014000500540065007800740039000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span><o:p></o:p></span></p>
+  <p class=MsoNormal style='tab-stops:center 212.65pt'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoPlainText style='margin-left:141.75pt;text-indent:-141.75pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText><span lang=EN-US style='font-size:12.0pt;font-family:
+Arial'>The assignment should be handed in no later than the time and date shown
+above, unless an extension has been authorised on a <i>Request for an Extension
+for an Assessment</i> form which is available from the Office or <a
+href="http://www.student-admin.hull.ac.uk/downloads/Mitcircs.doc"><span
+style='mso-bidi-font-family:Arial'>http://www.student-admin.hull.ac.uk/downloads/Mitcircs.doc</span></a>. <span
+style='mso-spacerun:yes'></span>The extension form, once authorised by the
+lecturer concerned, should be attached to the assignment on submission (or
+given to the lecturer in the case of electronic submission).<o:p></o:p></span></p>
+
+<p class=MsoPlainText><b><span lang=EN-US style='font-family:Arial'><o:p>&nbsp;</o:p></span></b></p>
+<p>
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:Arial'>MARKING:<o:p></o:p></span></b></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=680
+ style='width:450pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-border-insideh:.5pt solid windowtext;
+ mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-lastrow:yes'>
+  <td width=168 style='width:125.85pt;border:solid windowtext 1.0pt;mso-border-alt:
+  solid windowtext .5pt;background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='tab-stops:center 212.65pt'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;mso-bidi-font-weight:bold'>Marking
+  will be by:</span><span lang=EN-US style='font-size:12.0pt;font-family:Arial'><o:p></o:p></span></p>
+  <p class=MsoNormal style='tab-stops:center 212.65pt'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=529 style='width:396.95pt;border:solid windowtext 1.0pt;border-left:
+  none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>Student Number
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><!--[if supportFields]><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial'><span style='mso-element:
+  field-begin'></span><span style='mso-spacerun:yes'>Â </span>FORMDROPDOWN </span><![endif]--><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial'><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF0A80000000000000000000000000000000000000000000000000000000000000FFFF050000000F00200070006C0065006100730065002000730065006C0065006300740020000E002000530074007500640065006E00740020004E0061006D006500200010002000530074007500640065006E00740020004E0075006D0062006500720020000C002000470072006F007500700020004E0061006D00650020000E002000470072006F007500700020004E0075006D006200650072002000</w:data>
+  </xml><![endif]--></span><!--[if supportFields]><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial'><span style='mso-element:field-end'></span></span><![endif]--><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoPlainText><b><span lang=EN-US style='font-size:12.0pt;font-family:
+Arial'><o:p>&nbsp;</o:p></span></b></p>
+
+
+<p class=MsoPlainText><a name="OLE_LINK2"></a><a name="OLE_LINK1"><span
+style='mso-bookmark:OLE_LINK2'><b><span lang=EN-US style='font-size:12.0pt;
+font-family:Arial'>BEFORE</span></b></span></a><span style='mso-bookmark:OLE_LINK1'><span
+style='mso-bookmark:OLE_LINK2'><span lang=EN-US style='font-size:12.0pt;
+font-family:Arial'> submission, each student must complete the <b
+style='mso-bidi-font-weight:normal'>correct </b>departmental coursework cover
+sheet dependant upon whether the assignment is being marked by student number,
+student name, group number or group name.<span style='mso-spacerun:yes'>
+</span>This is obtainable from the departmental student intranet at <o:p></o:p></span></span></span></p>
+
+<p class=MsoPlainText><span style='mso-bookmark:OLE_LINK1'><span
+style='mso-bookmark:OLE_LINK2'></span></span><a
+href="http://intra.net.dcs.hull.ac.uk/sites/home/student/ACW%20Cover%20Sheets/Forms/AllItems.aspx"><span
+style='mso-bookmark:OLE_LINK1'><span style='mso-bookmark:OLE_LINK2'><span
+lang=EN-US style='font-size:12.0pt;font-family:Arial'>http://intra.net.dcs.hull.ac.uk/sites/home/student/ACW%20Cover%20Sheets/Forms/AllItems.aspx</span></span></span><span
+style='mso-bookmark:OLE_LINK1'><span style='mso-bookmark:OLE_LINK2'></span></span></a><span
+style='mso-bookmark:OLE_LINK1'><span style='mso-bookmark:OLE_LINK2'><span
+lang=EN-US style='font-size:12.0pt;font-family:Arial'><o:p></o:p></span></span></span></p>
+
+<span style='mso-bookmark:OLE_LINK2'></span><span style='mso-bookmark:OLE_LINK1'></span>
+
+<p class=MsoPlainText><span lang=EN-US style='font-size:12.0pt;font-family:
+Arial'><span style='mso-spacerun:yes'></span></span><span lang=EN-US
+style='font-family:Arial'><o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:Arial'>ASSESSMENT:<o:p></o:p></span></b></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=680
+ style='width:450pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-border-insideh:.5pt solid windowtext;
+ mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-lastrow:yes'>
+  <td width=168 style='width:125.85pt;border:solid windowtext 1.0pt;mso-border-alt:
+  solid windowtext .5pt;background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='tab-stops:center 212.65pt'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial'>The assignment is marked out of:<o:p></o:p></span></p>
+  <p class=MsoNormal style='tab-stops:center 212.65pt'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=208 style='width:156.0pt;border:solid windowtext 1.0pt;border-left:
+  none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><!--[if supportFields]><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial'><span style='mso-element:
+  field-begin'></span><span style='mso-bookmark:Text11'><span
+  style='mso-spacerun:yes'>Â </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text11'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial'><![if !supportNestedAnchors]><a name=Text11></a><![endif]><span
+  style='mso-no-proof:yes'>20</span><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00000000140006005400650078007400310031000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text11'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text11'></span><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial'><o:p></o:p></span></p>
+  </td>
+  <td width=76 style='width:56.7pt;border:solid windowtext 1.0pt;border-left:
+  none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial'>and is worth<o:p></o:p></span></p>
+  </td>
+  <td width=142 style='width:106.3pt;border:solid windowtext 1.0pt;border-left:
+  none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>15%
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><a
+  name=Dropdown6></a><!--[if supportFields]><span style='mso-bookmark:Dropdown6'></span><span
+  style='mso-element:field-begin'></span><span style='mso-bookmark:Dropdown6'><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial'><span
+  style='mso-spacerun:yes'>Â </span>FORMDROPDOWN </span></span><![endif]--><span
+  style='mso-bookmark:Dropdown6'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial'><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF1A80000000000900440072006F00700064006F0077006E003600000000000000000000000000000000000000000000000000FFFF150000000F00200070006C0065006100730065002000730065006C0065006300740020000300200035002000040020003100300020000400200031003500200004002000320030002000040020003200350020000400200033003000200004002000330035002000040020003400300020000400200034003500200004002000350030002000040020003500350020000400200036003000200004002000360035002000040020003700300020000400200037003500200004002000380030002000040020003800350020000400200039003000200004002000390035002000050020003100300030002000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Dropdown6'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Dropdown6'></span><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial'><o:p></o:p></span></p>
+  </td>
+  <td width=104 style='width:77.95pt;border:solid windowtext 1.0pt;border-left:
+  none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial'>% of the module marks<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoHeader align=left style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:left;tab-stops:171.0pt'><b><span lang=EN-US style='font-size:10.0pt;
+font-family:Arial;font-variant:normal !important;text-transform:uppercase'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoHeader align=left style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:left;tab-stops:171.0pt'><b><span lang=EN-US style='font-size:12.0pt;
+font-family:Arial;font-variant:normal !important;text-transform:uppercase'>ASSESSMENT
+STRATEGY AND LEARNING OUTCOMES:<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:Arial'>The
+overall assessment strategy is designed to evaluate the student's achievement
+of the module learning outcomes, and is subdivided as follows:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=680
+ style='width:450pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-border-insideh:.5pt solid windowtext;
+ mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0'>
+  <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
+  background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;mso-bidi-font-weight:bold'>LO<o:p></o:p></span></p>
+  </td>
+  <td width=365 valign=top style='width:274.1pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;mso-bidi-font-weight:bold'>Learning
+  Outcome<o:p></o:p></span></p>
+  </td>
+  <td width=224 valign=top style='width:167.9pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;mso-bidi-font-weight:bold'>Method
+  of Assessment<o:p></o:p></span></p>
+  <p class=MsoNormal align=center style='text-align:center'><i><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial'>{e.g. report, demo}</span></i><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial;mso-bidi-font-weight:
+  bold'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bookmark:Text12'><b><i><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;mso-no-proof:yes'>Practical Subject
+  Specific Skills: <o:p></o:p></span></i></b></span></p>
+  <p class=MsoNormal><span style='mso-bookmark:Text12'><b><i><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial'><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00000000140006005400650078007400310032000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></i></b></span><!--[if supportFields]><span
+  style='mso-bookmark:Text12'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text12'></span><b><i><span lang=EN-US style='font-size:
+  12.0pt;font-family:Arial'><o:p></o:p></span></i></b></p>
+  </td>
+  <td width=365 valign=top style='width:274.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-bookmark:Text23'><i><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></i></span></p>
+  <p class=MsoNormal><span style='mso-bookmark:Text23'><i><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial'>Develop a simple application which uses system facilities to perform a communication task across a network.<o:p></o:p></span></i></span></p>
+  </td>
+  <td width=224 valign=top style='width:167.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><!--[if supportFields]><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial;mso-bidi-font-style:
+  italic'><span style='mso-element:field-begin'></span><span style='mso-bookmark:
+  Text65'><span style='mso-spacerun:yes'>Â </span>FORMTEXT <span
+  style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text65'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial;mso-bidi-font-style:italic'><![if !supportNestedAnchors]><a
+  name=Text65></a><![endif]><o:p></o:p></span></span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='mso-bookmark:Text65'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial;mso-bidi-font-style:italic'><o:p>&nbsp;</o:p></span></span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='mso-bookmark:Text65'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial;mso-bidi-font-style:italic'>Report<o:p></o:p></span></span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='mso-bookmark:Text65'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial;mso-bidi-font-style:italic'><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00000000140006005400650078007400360035000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text65'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text65'></span><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial;mso-bidi-font-style:italic'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=680
+ style='width:450pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-border-insideh:.5pt solid windowtext;
+ mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0'>
+  <td width=310 valign=top style='width:232.2pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;mso-bidi-font-weight:bold'>Assessment
+  Criteria<o:p></o:p></span></p>
+  </td>
+  <td width=151 valign=top style='width:113.4pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;mso-bidi-font-weight:bold'>Contributes
+  to Learning Outcome<o:p></o:p></span></p>
+  </td>
+  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;mso-bidi-font-weight:bold'>Mark<o:p></o:p></span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td width=310 valign=top style='width:232.2pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><!--[if supportFields]><span lang=EN-US style='font-size:
+  12.0pt;font-family:Arial;mso-bidi-font-weight:bold'><span style='mso-element:
+  field-begin'></span><span style='mso-bookmark:Text14'><span
+  style='mso-spacerun:yes'>Â </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text14'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial;mso-bidi-font-weight:bold'><![if !supportNestedAnchors]><a
+  name=Text14></a><![endif]><span style='mso-no-proof:yes'>Client Operation<o:p></o:p></span></span></span></p>
+  <p class=MsoNormal><span style='mso-bookmark:Text14'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;mso-bidi-font-weight:bold;
+  mso-no-proof:yes'>Server Operation<o:p></o:p></span></span></p>
+  <p class=MsoNormal><span style='mso-bookmark:Text14'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;mso-bidi-font-weight:bold;
+  mso-no-proof:yes'>Network Error Handling<o:p></o:p></span></span></p>
+  <p class=MsoNormal><span style='mso-bookmark:Text14'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;mso-bidi-font-weight:bold;
+  mso-no-proof:yes'>Coding Style, Design and <br>&nbsp;&nbsp;&nbsp;&nbsp;Documentation Quality<o:p></o:p></span></span></p>
+  <p class=MsoNormal><span style='mso-bookmark:Text14'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial;mso-bidi-font-weight:bold;
+  mso-no-proof:yes'>Optional Features<o:p></o:p></span></span></p>
+  </td>
+  <td width=151 valign=top style='width:113.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><!--[if supportFields]><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial'><span style='mso-element:
+  field-begin'></span><span style='mso-bookmark:Text36'><span
+  style='mso-spacerun:yes'>Â </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text36'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial'><![if !supportNestedAnchors]><a name=Text36></a><![endif]><span
+  style='mso-no-proof:yes'>&nbsp;<o:p></o:p></span></span></span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='mso-bookmark:Text36'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial;mso-no-proof:yes'>&nbsp;<o:p></o:p></span></span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='mso-bookmark:Text36'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial;mso-no-proof:yes'>&nbsp;<o:p></o:p></span></span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='mso-bookmark:Text36'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial;mso-no-proof:yes'>&nbsp;<o:p></o:p></span></span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='mso-bookmark:Text36'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial;mso-no-proof:yes'>&nbsp;</span></span><span
+  style='mso-bookmark:Text36'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial'><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00000000140006005400650078007400330036000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text36'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text36'></span><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial'><o:p></o:p></span></p>
+  </td>
+  <td width=236 valign=top style='width:177.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><!--[if supportFields]><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial;mso-bidi-font-weight:
+  bold'><span style='mso-element:field-begin'></span><span style='mso-bookmark:
+  Text37'><span style='mso-spacerun:yes'>Â </span>FORMTEXT <span
+  style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text37'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial;mso-bidi-font-weight:bold'><![if !supportNestedAnchors]><a
+  name=Text37></a><![endif]><span style='mso-no-proof:yes'>35%<o:p></o:p></span></span></span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='mso-bookmark:Text37'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial;mso-bidi-font-weight:bold;mso-no-proof:yes'>35%<o:p></o:p></span></span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='mso-bookmark:Text37'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial;mso-bidi-font-weight:bold;mso-no-proof:yes'>20%<o:p></o:p></span></span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='mso-bookmark:Text37'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial;mso-bidi-font-weight:bold;mso-no-proof:yes'>10%<o:p></o:p></span></span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='mso-bookmark:Text37'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial;mso-bidi-font-weight:bold;mso-no-proof:yes'>&nbsp;<o:p></o:p></span></span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='mso-bookmark:Text37'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial;mso-bidi-font-weight:bold;mso-no-proof:yes'>10%</span></span><span
+  style='mso-bookmark:Text37'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial;mso-bidi-font-weight:bold'><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00000000140006005400650078007400330037000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text37'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text37'></span><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial;mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:Arial'><o:p>The maximum possible mark of 110% is capped at 100%.</o:p></span></p>
+<p>
+<p class=MsoNormal><b><span lang=EN-US style='font-size:12.0pt;font-family:
+Arial'>FEEDBACK<o:p></o:p></span></b></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=680
+ style='width:450pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-border-insideh:.5pt solid windowtext;
+ mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0'>
+  <td width=168 style='width:125.85pt;border:solid windowtext 1.0pt;mso-border-alt:
+  solid windowtext .5pt;background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='tab-stops:center 212.65pt'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial'>Feedback will be given via:<o:p></o:p></span></p>
+  </td>
+  <td width=208 style='width:156.0pt;border:solid windowtext 1.0pt;border-left:
+  none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><!--[if supportFields]><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial'><span style='mso-element:
+  field-begin'></span><span style='mso-spacerun:yes'>Â </span>FORMDROPDOWN </span><![endif]--><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial'><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF1280000000000900440072006F00700064006F0077006E003700000000000000000000000000000000000000000000000000FFFF0500000017002000530065006C0065006300740020007000720069006D0061007200790020006D006500740068006F00640020001000200046006500650064006200610063006B0020005300680065006500740020000A00200049006E00200043006C0061007300730020000C0020004F006E006500200074006F0020004F006E0065002000070020004F0074006800650072002000</w:data>
+  </xml><![endif]--></span><!--[if supportFields]><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial'><span style='mso-element:field-end'></span></span><![endif]--><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial'><o:p></o:p></span></p>
+  </td>
+  <td width=170 style='width:127.55pt;border:solid windowtext 1.0pt;border-left:
+  none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  background:#F3F3F3;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial'>Other<o:p></o:p></span></p>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial'>(please state method)<o:p></o:p></span></p>
+  </td>
+  <td width=151 style='width:113.4pt;border:solid windowtext 1.0pt;border-left:
+  none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial'><span style='mso-field-code:
+  " FORMTEXT "'><span style='font-family:"Arial Unicode MS";mso-fareast-font-family:
+  "Arial Unicode MS";mso-bidi-font-family:"Arial Unicode MS";mso-no-proof:yes'>Annotated
+  Report</span><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00000000140006005400650078007400310036000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span><o:p></o:p></span></p>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=168 style='width:125.85pt;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='tab-stops:center 212.65pt'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial'>Other feedback (if appropriate)
+  will be given via:<i style='mso-bidi-font-style:normal'><o:p></o:p></i></span></p>
+  </td>
+  <td width=529 colspan=3 style='width:396.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><!--[if supportFields]><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial'><span style='mso-element:
+  field-begin'></span><span style='mso-bookmark:Text66'><span
+  style='mso-spacerun:yes'>Â </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text66'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial'><![if !supportNestedAnchors]><a name=Text66></a><![endif]><span
+  style='mso-no-proof:yes'>In Class and by Email or Webpage</span><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00000000140006005400650078007400360036000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text66'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text66'></span><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+  <td width=168 style='width:125.85pt;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='tab-stops:center 212.65pt'><span lang=EN-US
+  style='font-size:12.0pt;font-family:Arial'>Feedback will be provided no later
+  than:<o:p></o:p></span></p>
+  </td>
+  <td width=529 colspan=3 style='width:396.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 212.65pt'><!--[if supportFields]><span
+  lang=EN-US style='font-size:12.0pt;font-family:Arial'><span style='mso-element:
+  field-begin'></span><span style='mso-bookmark:Text15'><span
+  style='mso-spacerun:yes'>Â </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text15'><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial'><![if !supportNestedAnchors]><a name=Text15></a><![endif]><span
+  style='mso-no-proof:yes'>6<sup>th</sup> May 2008</span><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00000000140006005400650078007400310035000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text15'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text15'></span><span lang=EN-US style='font-size:12.0pt;
+  font-family:Arial'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><i><span lang=EN-US style='font-size:10.0pt;font-family:
+Arial'><o:p>&nbsp;</o:p></span></i></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:Arial;mso-bidi-font-style:italic'>Questions<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:Arial;
+mso-bidi-font-style:italic'>If you have any questions regarding this assessment
+you <b style='mso-bidi-font-weight:normal'>MUST</b> speak to the lecturer as
+soon as possible.<span style='mso-spacerun:yes'></span><o:p></o:p></span></p>
+
+<p class=MsoPlainText><b><span lang=EN-US style='font-size:12.0pt;font-family:
+Arial'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoPlainText><span lang=EN-US style='font-size:12.0pt;font-family:
+Arial;mso-bidi-font-weight:bold'>You are advised to read the <b>NOTES</b>
+regarding Late Penalties, Use of Unfair means and Quality Assurance on the
+department's student intranet at: <o:p></o:p></span></p>
+
+<p class=MsoPlainText><span lang=EN-US style='font-size:12.0pt;font-family:
+Arial'><a
+href="http://intra.net.dcs.hull.ac.uk/sites/home/student/ACW%20Cover%20Sheets/Forms/AllItems.aspx"><span
+style='mso-bidi-font-family:Arial'>http://intra.net.dcs.hull.ac.uk/sites/home/student/ACW%20Cover%20Sheets/Forms/AllItems.aspx</span></a><o:p></o:p></span></p>
+
+<p class=MsoPlainText><b><span lang=EN-US style='font-size:12.0pt;font-family:
+Arial'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:Arial'>In
+case of any subsequent dispute, query, or appeal regarding your coursework, you
+are reminded that it is your responsibility, not the Department’s, to produce
+the assignment in question.<span style='mso-spacerun:yes'></span><o:p></o:p></span></p>
+<p>
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:Arial'>(<i>Assignment
+details attached)<o:p></o:p></i></span></p>
+
+<p class=MsoPlainText><b><span lang=EN-US style='font-size:12.0pt;font-family:
+Arial'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoPlainText><b><span lang=EN-US style='font-size:12.0pt;font-family:
+Arial'><o:p>&nbsp;</o:p></span></b></p>
+
+</div>
+<hr>
+
+</div>
+<p>
+<h2><a name=SECTION00005000000000000000>Client and Server in C#</a></h2>
+
+<p class=MsoNormal><span style='mso-bookmark:SECTION00005000000000000000'>The
+coursework requires you to implement two C# Windows console applications; one
+is a client and the other is the server. They should use TCP sockets by means
+of the appropriate classes in System.Net and System.Net.Sockets. The task is to
+implement a simple student locating facility. Students will be identified by
+their computer login name. It is not necessary to implement any form of user
+interface and simple use of Microsoft Command Prompt interface to run the client is required. If students
+implement an optional windows interface this should be enabled by a 
+command line switch.</span></p>
+
+<p><span style='mso-bookmark:SECTION00005000000000000000'>The client, we shall
+call it </span><span style='mso-bookmark:SECTION00005000000000000000'><tt><span
+style='font-size:10.0pt'>whereis</span></tt> can have two arguments, a user
+name and a string giving location information. </span></p>
+
+<p><span style='mso-bookmark:SECTION00005000000000000000'>For example: </span></p>
+
+<pre><span style='mso-bookmark:SECTION00005000000000000000'>G:\08241\&gt; whereis cssbct</span></pre><pre><span
+style='mso-bookmark:SECTION00005000000000000000'>cssbct is in RB-336</span></pre><pre><span
+style='mso-bookmark:SECTION00005000000000000000'>G:\08241\&gt; whereis cssbct &quot;in RB-310 for a meeting&quot;</span></pre><pre><span
+style='mso-bookmark:SECTION00005000000000000000'>cssbct location changed to be in RB-310 for a meeting</span></pre><pre><span
+style='mso-bookmark:SECTION00005000000000000000'>G:\08241\&gt; whereis cssbct</span></pre><pre><span
+style='mso-bookmark:SECTION00005000000000000000'>cssbct is in RB-310 for a meeting</span></pre>
+<p>
+<p class=MsoNormal><span style='mso-bookmark:SECTION00005000000000000000'>In
+this example the first call of the client showed the current location of the
+user cssbct. The second was used to change the location and the third showed
+the changed response. </span></p>
+
+<p><p>
+<h1><span style='mso-bookmark:SECTION00005000000000000000'>Protocol for
+Coursework </span></h1>
+
+<h2><span style='mso-bookmark:SECTION00005000000000000000'>Introduction </span></h2>
+
+<p><span style='mso-bookmark:SECTION00005000000000000000'>Your coursework
+should implement the following protocol for communication between the client
+and server. If each student invented their own protocol, the there would be no
+interoperability between different implementations. Students would also be
+making assumptions about requirements when implementing their programs which is
+not generally a good action for a software engineer. Requiring the
+implementation of a standard protocol means that every student's implementation
+should be interoperable with every other, and the working server provided by
+the lecturer. So you can develop your client using the lecturer's server, and
+develop your server later once you are happy with the correctness of your
+client. It is necessary to communicate with a reference or external server in
+addition to your own server in order to demonstrate sucessful client operation 
+for assessment.</span></p>
+
+<p><span style='mso-bookmark:SECTION00005000000000000000'>You will encode your
+data to be transferred between client and server as US-ASCII strings terminated
+by US-ASCII characters 13 then 10 (carriage return then line feed). There are
+other more readily available data encoding options in C# such as unicode and
+object serialization, but using US-ASCII makes our communication easily
+understandable by other non-C# applications. </span></p>
+
+<h2><span style='mso-bookmark:SECTION00005000000000000000'>Protocol </span></h2>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;margin-bottom:6.0pt;
+     mso-list:l1 level1 lfo3;tab-stops:list .5in'><span style='mso-bookmark:
+     SECTION00005000000000000000'>The server waits for clients to contact it.</span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;margin-bottom:6.0pt;
+     mso-list:l1 level1 lfo3;tab-stops:list .5in'><span style='mso-bookmark:
+     SECTION00005000000000000000'>Clients should connect and communicate with
+     the server via sockets and TCP packets.</span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;margin-bottom:6.0pt;
+     mso-list:l1 level1 lfo3;tab-stops:list .5in'><span style='mso-bookmark:
+     SECTION00005000000000000000'>Our protocol will operate over port 43, normally
+     used by the internet whois protocol.</span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;margin-bottom:6.0pt;
+     mso-list:l1 level1 lfo3;tab-stops:list .5in'><span style='mso-bookmark:
+     SECTION00005000000000000000'>A request from the client to the server for
+     the server to query the database for a person’s location looks like this:<br>
+     <span style='mso-spacerun:yes'> </span>&lt;name&gt;&lt;CR&gt;&lt;LF&gt;<br>
+     Where &lt;name&gt; is the name of the person who's location the client is
+     requesting.</span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;margin-bottom:6.0pt;
+     mso-list:l1 level1 lfo3;tab-stops:list .5in'><span style='mso-bookmark:
+     SECTION00005000000000000000'>A request from the client to the server for
+     the server to update the database with a new location for a person looks
+     like this:<br>
+     &lt;name&gt;&lt;space&gt;&lt;location&gt;&lt;CR&gt;&lt;LF&gt;<br>
+     <span class=GramE>Where</span>: &lt;name&gt; is the name of the person who’s
+     location the client wants to update.<br>
+     <span style='mso-spacerun:yes'>            </span>&lt;<span class=GramE>space</span>&gt;
+     is the US-ASCII space character.<br>
+     <span style='mso-spacerun:yes'>            </span>&lt;<span class=GramE>location</span>&gt;
+     is the new location for that person.</span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;margin-bottom:6.0pt;
+     mso-list:l1 level1 lfo3;tab-stops:list .5in'><span style='mso-bookmark:
+     SECTION00005000000000000000'>When the client requests the server to query
+     the database for a person’s location and the server finds an entry in the
+     database for that person the server responds like this:<br>
+     &lt;location&gt;&lt;CR&gt;&lt;LF&gt;<br>
+     &lt;drop connection&gt;<br>
+     Where: &lt;location&gt; is the location if found in the database for the
+     person.</span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;margin-bottom:6.0pt;
+     mso-list:l1 level1 lfo3;tab-stops:list .5in'><span style='mso-bookmark:
+     SECTION00005000000000000000'>When the client requests the server to query
+     the database for a person’s location but the server is
+     unable to find an entry in the database for that person the server
+     responds like this:<br>
+     ERROR: no entries found&lt;CR&gt;&lt;LF&gt;<br>
+     &lt;drops connection&gt;</span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;margin-bottom:6.0pt;
+     mso-list:l1 level1 lfo3;tab-stops:list .5in'><span style='mso-bookmark:
+     SECTION00005000000000000000'>When the client sends a request to the server
+     to update the database with a new location for a person the server
+     responds like this:<br>
+     OK&lt;CR&gt;&lt;LF&gt;<br>
+     &lt;drops connection&gt;</span></li>
+</ol>
+
+<p><span style='mso-bookmark:SECTION00005000000000000000'>In all examples above
+&lt;CR&gt; is US-ASCII character number 13, the carriage return character, and
+&lt;LF&gt; is US-ASCII character number 10, the line feed character. We are
+using both together as our string terminator. In all cases both the client and
+server should give up and drop connection if they are left waiting more than 1
+second (1000 milliseconds).</span></p>
+
+<h2><span style='mso-bookmark:SECTION00005000000000000000'>Optional Features</span></h2>
+
+<p class=MsoNormal><span style='mso-bookmark:SECTION00005000000000000000'>The
+client, as a minimum, can have the IP address of the server hardwired into the
+C# code. This is not very useful, and would be better to allow a parameter to
+specify the server IP. Even better, would be a Fully Qualified Domain Name for
+the server. For example: </span></p>
+<p>
+<pre><span style='mso-bookmark:SECTION00005000000000000000'><span class=GramE>G:\08241\</span>&gt; whereis -h 150.237.92.99 cssbct</span></pre><pre><span
+style='mso-bookmark:SECTION00005000000000000000'><span class=GramE>cssbct</span> is in RB-321</span></pre><pre><span
+style='mso-bookmark:SECTION00005000000000000000'><span class=GramE>G:\08241\</span>&gt; whereis -h somepc.dcs.hull.ac.uk cssbct &quot;changed room&quot;</span></pre><pre><span
+style='mso-bookmark:SECTION00005000000000000000'><span class=GramE>cssbct</span> location changed to changed room</span></pre>
+<p>
+<p class=MsoNormal><span style='mso-bookmark:SECTION00005000000000000000'>The
+server could, at a minimum, do its job silently. It would be helpful if it
+reported activity, either to the command window, or to a specially designed
+administration interface. For example: </span></p>
+<p>
+<pre><span style='mso-bookmark:SECTION00005000000000000000'><span class=GramE>G:\08241\</span>&gt; <span
+class=SpellE>whereisserver</span></span></pre><pre><span style='mso-bookmark:
+SECTION00005000000000000000'><span class=GramE>request</span> for cssbct</span></pre><pre><span
+style='mso-bookmark:SECTION00005000000000000000'><span class=GramE>replied</span> in RB-321</span></pre>
+<p>
+<p class=MsoNormal><span style='mso-bookmark:SECTION00005000000000000000'>The
+more information that is recorded the better, and a good server should keep log
+files: </span></p>
+<p>
+<pre><span style='mso-bookmark:SECTION00005000000000000000'>200.4.239.13 - - [28/Dec/2003:03:14:56 +0000] &quot;GET cssbct&quot; OK</span><br><span
+style='mso-bookmark:SECTION00005000000000000000'>150.237.92.99 - - [28/Dec/2003:03:15:23 +0000] &quot;SET cssbct some room&quot; OK</span><br><span
+style='mso-bookmark:SECTION00005000000000000000'>150.237.92.99 - - [28/Dec/2003:03:19:24 +0000] &quot;GET <span
+class=SpellE>cshwvv</span>&quot; UNKNOWN</span></pre>
+<p>
+<p class=MsoNormal><span style='mso-bookmark:SECTION00005000000000000000'>This
+example is shown in &quot;Standard Log Format&quot;. </span></p>
+<p>
+<h2><span style='mso-bookmark:SECTION00005000000000000000'>Deliverables</span></h2>
+
+<p class=MsoNormal><span style='mso-bookmark:SECTION00005000000000000000'>You
+must submit the following:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l2 level1 lfo4;tab-stops:list .5in'><span style='mso-bookmark:
+     SECTION00005000000000000000'>A report on your work, which should include,
+     as an appendix, the listings of your client and server programs, clearly
+     marked and appropriately annotated with comments. You should report on how
+     you have tested the work and show command prompt samples of input and output from the testing
+     which demonstrate to the reader its operation without the need to run programs from the disk. The input output samples could be by including screen captures in your report or redirecting the command prompt input output to a file which is included in the report. You should comment on
+     aspects of your design.</span></li>
+ <span style='mso-bookmark:SECTION00005000000000000000'></span>
+ <li class=MsoNormal
+     style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l2 level1 lfo4;tab-stops:list .5in'>An electronic copy
+     of your source code, compiled class files and report on either floppy
+     disk or CD,<b> </b>bundled<b> securely</b> with the report. The
+     disks should be labeled with your student number and module
+     number and year (2008) so they can be identified if they become
+     seperated from the report! The disk should also contain a file
+     named <tt>readme.txt</tt> which contains the same information as
+     written on the disk label and an annotated inventory of disk
+     contents. If submitting a CD a flexible plastic or paper case is
+     preferable to a jewel case which is too bulky!
+     The programs may be run from the disk to clarify
+     aspects of the operation of your work or selected at random for
+     checking purposes, and thus must be runnable from CD without installation.</li>
+<li>You may be asked to demonstrate the operation of your programs in
+the laboratory as part of the assessment. If you have developed the
+code elsewhere, please ensure it is compatible and available to be
+demonstrated on university lab systems.
+</ol>
+<p>
+<h2>Suggested Timescale for Completion of Work</h2>
+
+<p><span class=GramE>Weeks</span> 1 - 3. Develop and compete your
+client by having it communicate with the working server provided by your
+lecturer or an external third party internet server. Ask your<span class=GramE>&nbsp; demonstrator</span> or lecturer for
+the IP address or domain name of the server. It is often sensible to be sure of the correctness of your 
+client before proceeding to develop your server.</p>
+
+<p><span class=GramE>Weeks</span> 4 - 6. Develop and complete your
+server using your own client to interface with it. Note that to truly test the
+network communication between your client and server both programs need to be
+running on separate machines.</p>
+<p>Weeks 6 - 7. Complete the documentation and report.
+</div>
+
+</body>
+
+</html>

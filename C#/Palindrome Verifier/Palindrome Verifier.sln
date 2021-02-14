@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PalindromeUserInterface", "Palindrome Verifier\PalindromeUserInterface.csproj", "{199E8FFA-B0F0-4C7D-8018-CC6BD8165623}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PalindromeEngine", "PalindromeEngine\PalindromeEngine.csproj", "{B1AEA131-0275-4745-B0C6-29EC36D4AFD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PalindromeTests", "PalindromeTests\PalindromeTests.csproj", "{382A6ECF-9CD1-43F5-9E7B-1E255CC9E13D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{199E8FFA-B0F0-4C7D-8018-CC6BD8165623}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{199E8FFA-B0F0-4C7D-8018-CC6BD8165623}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{199E8FFA-B0F0-4C7D-8018-CC6BD8165623}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{199E8FFA-B0F0-4C7D-8018-CC6BD8165623}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1AEA131-0275-4745-B0C6-29EC36D4AFD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1AEA131-0275-4745-B0C6-29EC36D4AFD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1AEA131-0275-4745-B0C6-29EC36D4AFD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1AEA131-0275-4745-B0C6-29EC36D4AFD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{382A6ECF-9CD1-43F5-9E7B-1E255CC9E13D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{382A6ECF-9CD1-43F5-9E7B-1E255CC9E13D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{382A6ECF-9CD1-43F5-9E7B-1E255CC9E13D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{382A6ECF-9CD1-43F5-9E7B-1E255CC9E13D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

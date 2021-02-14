@@ -1,0 +1,85 @@
+8
+
+dir
+2
+https://wush.net/svn/nilrem/2nd_year/08220/miles/ProjectWork/system-04.12.07-v5/System/System
+https://wush.net/svn/nilrem
+
+
+
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+
+svn:special svn:externals svn:needs-lock
+
+SystemManagement.csproj
+file
+
+
+
+
+2007-12-01T14:57:10.000000Z
+358e67418a61457bb60198c9b2180b8f
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+Employee.cs
+file
+
+
+
+
+2007-12-04T18:25:26.000000Z
+d45558d2d5feaf4bc3b5340a53220b90
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+Task.cs
+file
+
+
+
+
+2007-12-04T20:02:36.000000Z
+bb260d7ecb43226d1b4bed2dab0a7c57
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+bin
+dir
+
+System.cs
+file
+
+
+
+
+2007-12-04T13:22:56.000000Z
+123f8cfd4babfebc70ee5d6cc314a883
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+obj
+dir
+
+TaskAssign.cs
+file
+
+
+
+
+2007-12-04T21:07:30.000000Z
+098fd45e6e26cc79d5bd9eed0642df71
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+Properties
+dir
+

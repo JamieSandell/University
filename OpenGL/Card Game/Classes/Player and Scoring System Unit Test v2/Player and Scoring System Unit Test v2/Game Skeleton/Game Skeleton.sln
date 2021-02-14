@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game Skeleton", "Game Skeleton\Game Skeleton.csproj", "{2E704D71-E5D8-40A8-8930-3D4116479B64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Player", "..\Player\Player\Player.csproj", "{B3696E1D-9F3D-4C32-BF85-48BEC742348F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScoringSystem", "..\ScoringSystem\ScoringSystem v2\ScoringSystem.csproj", "{0DC38CA5-AFAA-4D4C-AACB-C1705079AE85}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E704D71-E5D8-40A8-8930-3D4116479B64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E704D71-E5D8-40A8-8930-3D4116479B64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E704D71-E5D8-40A8-8930-3D4116479B64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E704D71-E5D8-40A8-8930-3D4116479B64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3696E1D-9F3D-4C32-BF85-48BEC742348F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3696E1D-9F3D-4C32-BF85-48BEC742348F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3696E1D-9F3D-4C32-BF85-48BEC742348F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3696E1D-9F3D-4C32-BF85-48BEC742348F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DC38CA5-AFAA-4D4C-AACB-C1705079AE85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DC38CA5-AFAA-4D4C-AACB-C1705079AE85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DC38CA5-AFAA-4D4C-AACB-C1705079AE85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DC38CA5-AFAA-4D4C-AACB-C1705079AE85}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

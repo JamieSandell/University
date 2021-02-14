@@ -1,0 +1,97 @@
+8
+
+dir
+2
+https://wush.net/svn/nilrem/2nd_year/08220/miles/ProjectWork/UIdesign/WindowsApplication1/WindowsApplication1/obj/Debug
+https://wush.net/svn/nilrem
+
+
+
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+
+
+svn:special svn:externals svn:needs-lock
+
+WindowsApplication1.exe
+file
+
+
+
+
+2007-11-07T20:23:34.000000Z
+ebe9ee62c6f099013f095d9a81abd0a5
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+has-props
+
+WindowsApplication1.csproj.GenerateResource.Cache
+file
+
+
+
+
+2007-11-07T20:23:00.000000Z
+13c4c60df48f61243d176fe20658353f
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+has-props
+
+WindowsApplication1.pdb
+file
+
+
+
+
+2007-11-07T20:23:34.000000Z
+787c0c5ba57d24b1eaaf25157746cb54
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+has-props
+
+TempPE
+dir
+
+WindowsApplication1.Form1.resources
+file
+
+
+
+
+2007-11-07T20:23:00.000000Z
+d85fe5b9a2e22066b1d7dc89c16ee527
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+has-props
+
+WindowsApplication1.Form2.resources
+file
+
+
+
+
+2007-11-07T20:23:00.000000Z
+d85fe5b9a2e22066b1d7dc89c16ee527
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+has-props
+
+WindowsApplication1.Properties.Resources.resources
+file
+
+
+
+
+2007-11-07T20:23:00.000000Z
+d85fe5b9a2e22066b1d7dc89c16ee527
+2008-02-13T11:27:19.902379Z
+2
+nilrem
+has-props
+

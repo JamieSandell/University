@@ -1,0 +1,34 @@
+When the application is launched it scans the network for other applications on this port.
+If it finds one it sends a message, if it replies with the correct reply it knows this is a valid peer.
+It then asks that peer for it's ID and stores it.
+It repeats this process until it reaches the maximum number of peers or the addresses of the network have been exhausted.
+If all addresses have been checked and the maximum number of peers wasn't reached then this pc becomes the next peer and an id is assigned, this id and ip address of this peer is the given to all of the other peers and a permananent connection is established between them.
+
+A connection from the peer is then made to every other peer, each connection is done in a seperate thread.
+(or possibly have a listener in it's own thread, once a connection is established create another listener in it's own thread).
+So the number of available open connections to the peer must be MaximumNumberOfPeers - 1.
+
+As the peer moves across the world it's position is sent to all other peers, as well as it's id and it's viewing frustum.
+Once a peer has all the other peers' viewing frustums and their positions,
+it then cycles through all its balls, if a ball is not within anyother peers frustums, or within any other peers gravity well it is flagged has having no contention and it's ownership remains with the current peer.
+
+If the ball is not within its current peers viewing frustum or within its current peers gravity well AND it is within the viewing frustum or gravity well of another peer the ownership of that ball is transferred to that peer.
+
+If the ball is within it's current peers gravity well OR within its current peers viewing frustum AND it is within another peers gravity well OR viewing frustum THEN the ownership doesn't transfer but the ball is marked as contended
+
+Each peer will have five lists of balls, OwnedBallsInView, OwnedBalls, OwnedContendedBalls, ContendBalls, and OtherBalls.
+The OwnedBallsInView list represents all of the balls that the peer owns that are not contended and are in the viewing frustum.
+The OwnedBalls list represents all of the balls the peer owns but aren't in view.
+The OwnedContendedBalls list represents all of the balls that the peer owns but are currently contended.
+The ContendedBalls list represents all of the balls this peer is contending with but does not own.
+The OtherBalls list represents all of the other balls in the world but are neither owned nor contended by this peer.
+
+The peer will update and draw all of the OwnedBallsInView.
+The peer will update all of the ownedballs (no collision checks are done with other balls, only the arena wall).
+The peer will pass any forces acting on the contendedballs back to the peer that owns them (including gravity well forces and colliding with it's own ball)
+The peer maintains the list of otherballs, updating their positions and velocties (pass from their owners).
+ if one of these otherballs comes into view it gets added to the contended list (if in contention with another peer), else ownership is transferred to this peer and it is removed from this list and added to one of the other appropriate lists.
+
+Every second a peer sends a ping to every other peer, if the peer doesn't respond within a second that peer is flagged as been down, and the peer with the lowest id (i.e the first peer) gets ownership of the balls, these new balls are then evenly distributed amongst the remaining peers.
+
+A peer only needs to know where the other balls are when a ball comes into it's area (checking the balls against its viewing frustum and its gravity well
